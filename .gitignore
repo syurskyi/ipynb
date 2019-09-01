@@ -32,5 +32,6 @@ videos/
 *.sketch
 
 venv/
-/.gitignore
+
+
 
