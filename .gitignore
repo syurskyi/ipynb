@@ -1,0 +1,36 @@
+# Created by .ignore support plugin (hsz.mobi)
+### .gitignore template
+# Created by .ignore support plugin (hsz.mobi)
+
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+.idea/vcs.xml
+rebrand-subs/
+captions/
+page_*.jpeg
+exercises/
+Subtitles
+documents/
+.env/
+logs.txt
+data.db
+*.key
+*.indd
+*.png
+.DS_Store
+.vscode/
+__pycache__/
+*.scriv
+*.pyc
+*.screenflow
+*.mp4
+*.mov
+*.cmproj
+exports/
+videos/
+*.numbers
+*.sketch
+
+venv/
+/.gitignore
+
