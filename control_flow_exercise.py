@@ -319,14 +319,6 @@ x = 10
 # print(x _)
 
 print()
-
-x = 10
-while x:
-    x = x - 1
-    if x % 2 == 0:  # Even? -- print
-        print(x, end=' ')
-
-print()
 # ######################################################################################################################
 # while break
 
@@ -464,15 +456,16 @@ print()
 # for
 # General Format
 # "spam", "eggs", "ham"
-# print(_)
+# print(_, __)
 
 sum = 0
-# 1, 2, 3, 4]
+# [1, 2, 3, 4]
 # sum
 # print(sum)
 
 prod = 1
 # item 1, 2, 3, 4]
+# prod
 # print(prod)
 
 print()
@@ -483,9 +476,10 @@ S = "lumberjack"
 T = ("and", "I'm", "okay")
 # # #  Iterate over a string
 # x
-
+# print(_, _)
 # # # Iterate over a tuple
 # x
+# print(_, _)
 
 # # # Iterate over a os
 import os
@@ -513,7 +507,7 @@ D = {'a': 1, 'b': 2, 'c': 3}
 # key in D:
 # print(_ '=>' _)
 
-# print(_(D._()))
+# print(l_(D._()))
 
 print()
 # ######################################################################################################################
@@ -552,10 +546,10 @@ print()
 # ######################################################################################################################
 #  extended sequence assignment in for loops
 #  Extended seq assignment
-a, *b, c = (1, 2, 3, 4)
+# a, *b, c = (1, 2, 3, 4)
 # print(a, b, c)
 # for loop
-# [(1, 2, 3, 4), (5, 6, 7, 8)
+# a *b c [(1, 2, 3, 4), (5, 6, 7, 8)
 # print(a, b, c)
 
 print()
@@ -577,10 +571,10 @@ tests = [(4, 5), 3.14]  # Keys to search for
 # print(_"not found!")
 
 # key     # For all keys
-# Let Python check for a match
+# key     # Let Python check for a match
 # print(_ "was found")
 
-# print(key, "not found!")
+# print(_, "not found!")
 
 print()
 # ######################################################################################################################
@@ -591,6 +585,7 @@ res = []  # Start empty
 # x       # Scan first sequence
 # x       # Common item?
 # Add to result end
+# print(_)
 
 # for
 # Enumeration of letters in a word
@@ -612,7 +607,7 @@ arr = {"x": 1, "y": 2, "z": 3}
 # key :  # Словари также поддерживают итерации
 # print(_, _)
 #
-# arr = {"x": 1, "y": 2, "z": 3}
+arr = {"x": 1, "y": 2, "z": 3}
 # key    #  сортировать
 # print(_, _)
 
@@ -632,6 +627,7 @@ sentence = "now is the time for all good people to come to the aid"
 count = 0
 # letter
 # 'a' 'e' 'i' 'u' 'o':
+
 print("The number of vowels is ")
 
 print()
