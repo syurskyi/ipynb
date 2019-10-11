@@ -87,7 +87,7 @@ print()
 # ######################################################################################################################
 # Выведем все элементы словаря:
 d = {1: "int", "a": "str", (1, 2): "tuple"}
-print(__, ___, ____)
+# print(__, ___, ____)
 
 print()
 # ######################################################################################################################
@@ -278,8 +278,8 @@ print()
 # ######################################################################################################################
 # popitem()
 d = {"a": 1, "b": 2}
-print(_._())
-print(_._())
+# print(_._())
+# print(_._())
 
 print()
 # ######################################################################################################################
@@ -336,7 +336,7 @@ d1 = {"a": 1, "b": [10, 20]}
 # # # # Изменяем значение вложенного списка
 # new
 # # # # Изменились значения и в d1, и в d2!!!
-print(_, _)
+# print(_, _)
 
 print()
 # ######################################################################################################################
@@ -394,7 +394,7 @@ print()
 # print(_)
 
 # D = _._: c + ! _ c _ _SPAM, EGGS, HAM
-print(_)
+# print(_)
 
 print()
 # ######################################################################################################################
@@ -570,9 +570,9 @@ phonebook = {
     'Mary': '890-532',  # последняя запятая игнорируется
 }
 
-number = _._('Lumberjack')
+# number = _._('Lumberjack')
 # print('Deleted Lumberjack (was ' + _ + ')')
-print(_)
+# print(_)
 
 print()
 # ######################################################################################################################
@@ -618,163 +618,283 @@ phonebook = {
 # _._(Carl=783-923_ Victoria=386-486)
 # print(_)
 
+print()
+# ######################################################################################################################
 # подсчитать количество каждого символа в строке using Counter
+# import
+# c abcdeabcdabcaba
+# print(_)
 
+print()
+# ######################################################################################################################
 # три наиболее частых элемента
 # using Counter
-C = None
+# import
+# c _(abcdeabcdabcaba)
+# print(_._(3))
 
-
+print()
+# ######################################################################################################################
 # все уникальные элементы
 # using Counter
-C = None
+# import
+# c _(abcdeabcdabcaba)
+# print(_(_))
 
+print()
+# ######################################################################################################################
 # все элементы
-# using Counter
-C = None
+# using Counter and sorted
+# import
+# c _(abcdeabcdabcaba)
+# print(_(_.)
 
+print()
+# ######################################################################################################################
 # сумма значений
 # using Counter
-C = None
+# import
+# c _(abcdeabcdabcaba)
+# print(_(_._)
 
+print()
+# ######################################################################################################################
 # количество букв 'a'
 # using Counter
-C = None
+# import
+# c _(abcdeabcdabcaba)
+# print(_[a])
 
+print()
+# ######################################################################################################################
 # добавить новые буквы
 # using Counter
-C = None
+# import
+# c _(abcdeabcdabcaba)
+# elem 'shazam'
+#     _[_] += 1
 
+print()
+# ######################################################################################################################
 # удалить все 'b'
 # using Counter
-C = None
-
+# import
+# c _(abcdeabcdabcaba)
+# _ _[b]
+print()
+# ######################################################################################################################
 # создать новый счётчик
 # using Counter
-C = None
+# import
+# d  _(simsalabim)
 
+print()
+# ######################################################################################################################
 # добавить его элементы в первый
 # using Counter
-C = None
+# import
+# c  _(abcdeabcdabcaba)
+# d _(simsalabim)
+# _._(_)
 
+print()
+# ######################################################################################################################
 # очистить счётчик
 # using Counter
-C = None
+# import
+# c _(abcdeabcdabcaba)
+# _._()
 
+print()
+# ######################################################################################################################
 # # внимание: если счёт элемента установить или уменьшить до нуля, он останется в
 # # счётчике, пока не будет удалён явно
 # using Counter
-C = None
+# c  _(aaabbc)
+# _['b'] -= 2
+# print(_._())
 
-
+print()
+# ######################################################################################################################
 # Dictionary keys must be hashable objects. Associated values on the other hand can be any object
 # # # List
+(1, 2, 3)
 # # # Tuples
+# hash([1, 2, 3])
 # # # Dictionary
-# # # Numbers
+# hash(([1, 2], [3, 4]))
 
-
+print()
+# ######################################################################################################################
 # Interestingly, functions are hashable:
 
-def mu_func():
+def my_func(a, b, c):
     pass
-
 # # # # Which means we can use functions as keys in dictionaries:
-d = None
+# d _ _ _ [10, 20, 30]
 
+print()
+# ######################################################################################################################
 # We can also create dictionaries using a dictionary comprehension.
 
 keys = ['a', 'b', 'c']
 values = (1, 2, 3)
-
 # # # # We can then easily create a dictionary this way - the non-Pythonic way!
 # # # # creates an empty dictionary
+# d
+# k v
+# print(_)
 
 # # # # But it is much simpler to use a dictionary comprehension:
+# d k_ v _ _, _ _ _(_, _)}
 
+print()
+# ######################################################################################################################
 # list comprehensions - you can have nested loops, if statements, etc.
 keys = ['a', 'b', 'c', 'd']
 values = (1, 2, 3, 4)
 
-d = None
+# d k: v _ _, _ _ _(_, _) _ _ % 2 == 0
+# print(_)
 
+print()
+# ######################################################################################################################
 # create a grid of 2D coordinate pairs, and calculate their distance from the origin:
 
 x_coords = (-2, -1, 0, 1, 2)
 y_coords = (-2, -1, 0, 1, 2)
 
-grid = None
-
+# grid x y _ x _ _ _ y _
+# print(_)
 import math
-grid_extended = None
+# grid_extended = x y _._(x, y) _ x, y _ _
+# print(_)
 
 # # # # We can now easily tweak this to make a dictionary, where the coordinate pairs are the key,
 # # # # and the distance the value:
+# grid_extended x, y_ _._(x, y) _ x, y _ _
+# print(_)
 
-grid_extended = None
-
+print()
+# ######################################################################################################################
 # Using fromkeys
-
-counters = None
-
+# counters _._ a b c 0
+# print(_)
 # # # # If we do not specify a value, then None is used:
+# d _._abc
+# print(_)
 
+print()
+# ######################################################################################################################
 # Dictionaries support the len function - this simply returns the number of key/value pairs in the dictionary:
-d = None
+# d _(_(abc_ _1 4))
+print(d)
+# print(_(_))
 
+print()
+# ######################################################################################################################
 # Here we have a string where we want to count the number of each character that appears in the string.
 # Since we know the alphabet is a-z, we could create a dictionary with these initial keys -
 # but maybe the string contains characters outside of that, maybe punctuation marks, emojis, etc.
 # So it's not really feasible to take that approach.
 
 text = 'Put here some long text'
-# counts = dict()
-
+# counts _()
+# c _ _
+# _[_] = _._(__ 0) + 1
 # We can refine this a bit - first we'll ignore spaces,
 # then we'll want to consider lowercase and uppercase characters as the same:
+# counts _()
+# _ c _ _:
+#     key = _._()._()
+#     _ _:
+#         _[_] = _._(_, 0) + 1
+# print(_)
 
-# counts = dict()
-
+print()
+# ######################################################################################################################
 # Removing elements from a dictionary
 # pop()
+# d _._(_ _ __ 0)
+# print(_)
+# result _._(b)
+# print(_)
+# print(_)
 
-d = None
+# result _._(z) # Error
 
-result = None
+# result _._(z 'Not found!')
+# print(_)
 
+print()
+# ######################################################################################################################
 # Removing elements from a dictionary
 # popitem()
-
 d = {'a': 10, 'b': 20, 'c': 30}
+# _._
+# _._
+# _._
 
+print()
+# ######################################################################################################################
 # Inserting keys with a default
 # Sometimes we may want to insert an element in a dictionary with a default value, but only
 # if the element is not already present:
-
 d = {'a': 1, 'b': 2, 'c': 3}
+# z _ _ _:
+#     _['z'] = 0
+# print(_)
 
 # # # # Function
-def insert_if_not_present():
-    pass
+# def insert_if_not_present(_, _, _):
+#     _ key _ _ d:
+#         _[_] = value
+#         _ _
+#     _:
+#         _ _[_]
+# print(_)
 
-result = None  # d, 'a', 0
-result = None  # d, 'y', 10
+# result function_name(d, 'a', 0)
+# print(_, _)
+# print(_)
 
+# result function_name(d, 'y', 10)
+# print(_, _)
+
+print()
+# ######################################################################################################################
 # setdefault()
 d = {'a': 1, 'b': 2, 'c': 3}
-result = None
+# result _._(a, 0)
+# print(_)
+# print(_)
 
-result = None
+# result  _._(z 100)
+# print(_)
+# print(_)
 
-
+print()
+# ######################################################################################################################
 # Clearing All Items
 d = {'a': 1, 'b': 2, 'c': 3}
+# print(_)
+# _._
+# print(_)
 
+print()
+# ######################################################################################################################
 # how many times each character occurred in a string:
 
 text = 'Some long text'
-counts = None
+# counts = _()
+# _ c _ _:
+#     key = _._()._()
+#     _ _:
+#         _[_] = _._(_, 0) + 1
+# print(_)
 
+print()
+# ######################################################################################################################
 # how many times each character occurred in a string:
 # Suppose now that we just want a dictionary to track the uppercase, lowercase, and other characters in the string
 # (i.e. kind of grouping the data by uppercase, lowercase, other) - again ignoring spaces:
@@ -787,111 +907,212 @@ text = 'Some long text'
 
 categories = None
 
-# ow many times each character occurred in a string:
+print()
+# ######################################################################################################################
+# kow many times each character occurred in a string:
 # We can simplify this a bit using setdefault:
 
 text = 'Some long text'
-categories = None
+# categories
+# _ c _ t:
+#     _ _ != ' ':
+#         i_ c i_ s_.a..._l...:
+#             k.. = 'lower'
+#         e... c _ s....a..._u...:
+#             k__ = 'upper'
+#         e_:
+#             k_ = 'other'
+#         i_ k_ n_ i_ categories:
+#             c_[k_] = set()  # set we'll insert the value into
+#
+#         c_[k_].a_(_)
+# f_ cat i_ c_:
+#     print(_'{cat}:', ''.j_(c_[c_]))
 
+print()
+# ######################################################################################################################
 # how many times each character occurred in a string:
 #
 # Just to clean things up a but more, let's create a small utility function that will return the category key:
 
 text = 'Some long text'
 
-def cat_key():
-    pass
+# def cat_key(c):
+#     if c == ' ':
+#         return None
+#     elif c in string.ascii_lowercase:
+#         return 'lower'
+#     elif c in string.ascii_uppercase:
+#         return 'upper'
+#     else:
+#         return 'other'
 
-categories = None
+# categories = {}
+# for c in text:
+#     key = cat_key(c)
+#     if key:
+#         categories.setdefault(key, set()).add(c)
+#
+# for cat in categories:
+#     print(f'{cat}:', ''.join(categories[cat]))
 
 
+print()
+# ######################################################################################################################
 # how many times each character occurred in a string:
 #
 # If you are not a fan of using if...elif... in the cat_key function we could do it this way as well
 
-text = 'Some long text'
-
-def cat_key():
-    pass
-
+# text = 'Some long text'
+#
+# def cat_key(c):
+#     categories = {' ': None,
+#                  string.ascii_lowercase: 'lower',
+#                  string.ascii_uppercase: 'upper'}
+#     for key in categories:
+#         if c in key:
+#             return categories[key]
+#     else:
+#         return 'other'
+#
 # cat_key('a'), cat_key('A'), cat_key('!'), cat_key(' ')
+#
+# categories = {}
+# for c in text:
+#     key = cat_key(c)
+#     if key:
+#         categories.setdefault(key, set()).add(c)
+#
+# for cat in categories:
+#     print(f'{cat}:', ''.join(categories[cat]))
 
-categories = None
-
-
+print()
+# ######################################################################################################################
 # how many times each character occurred in a string:
 #
 # We could also do it this way, creating a categories dictionary that has all the individual characters we are interested in:
 
-# chain
-
-def cat_key():
-    pass
+# from itertools import chain
 
 
+# def cat_key(c):
+#     cat_1 = {' ': None}
+#     cat_2 = dict.fromkeys(string.ascii_lowercase, 'lower')
+#     cat_3 = dict.fromkeys(string.ascii_uppercase, 'upper')
+#     categories = dict(chain(cat_1.items(), cat_2.items(), cat_3.items()))
+#     categories = {**cat_1, **cat_2, **cat_3} - I'll explain this later
+    # return categories.get(c, 'other')
+
+
+# cat_key('a'), cat_key('A'), cat_key('!'), cat_key(' ')
+#
+# categories = {}
+# for c in text:
+#     key = cat_key(c)
+#     if key:
+#         categories.setdefault(key, set()).add(c)
+#
+# for cat in categories:
+#     print(f'{cat}:', ''.join(categories[cat]))
+
+
+print()
+# ######################################################################################################################
 # We can iterate over the keys of a dictionary using the dictionary's iterator directly, or via the keys view:
 
-d1 = {'a': 1, 'b': 2, 'c': 3}
-d2 = {'c': 30, 'd': 4, 'e': 5}
+# d1 = {'a': 1, 'b': 2, 'c': 3}
+# d2 = {'c': 30, 'd': 4, 'e': 5}
+#
+#
+# for key in d1:
+#     print(key)
+#
+# for key in d1.keys():
+#     print(key)
 
+print()
+# ######################################################################################################################
 # We can iterate over just the values of the dictionary:
 
-d1 = {'a': 1, 'b': 2, 'c': 3}
-d2 = {'c': 30, 'd': 4, 'e': 5}
-
+# d1 = {'a': 1, 'b': 2, 'c': 3}
+# d2 = {'c': 30, 'd': 4, 'e': 5}
+#
 
 # # # # and over the items, as tuples, of the dictionary:
+# for value in d1.values():
+#     print(value)
 
 # # # # We can also unpack the tuples directly while iterating:
+# for item in d1.items():
+#     print(item)
 
 # # # # These views are iterables, not just iterators:
+# for k, v in d1.items():
+#     print(k, v)
 
+# keys = d1.keys()
+# list(keys)
+
+print()
+# ######################################################################################################################
 # Let's say we have two dictionaries, and we want to create a new dictionary that contains all the items
 # whose keys are in both dictionaries. We want the value in the new dictionary to be a tuple containing all the values from both dictionaries:
 
 d1 = {'a': 1, 'b': 2, 'c': 3}
 d2 = {'b': 2, 'c': 30, 'd': 4}
 
-k1 = None
-k2 = None
-
+# k1 = d1.keys()
+# k2 = d2.keys()
+# k1 & k2
 # # # # So we have now identified the common keys, all that's left to do is build a dictionary from those keys and the corresponding values.
-
-new_dict = None
+# new_dict = None
+# for key in d1.keys() & d2.keys():
+#     new_dict[key] = (d1[key], d2[key])
+# print(new_dict)
 
 # # # # But, a dictionary comprehension would be a better approach here:
-
-new_dict = None
-
+# new_dict key: (_[_], _[_]) _ _ _ _._() _ _._()}
+# print(_)
+#
+print()
+# ######################################################################################################################
 # Let's tweak this a bit and generate a new dictionary, again containing just the common keys,
 # but whose value is either the common value, or if the underlying dictionaries have different values for the same key,
 # choose the values from the second dictionary, discarding the values from the first.
 
 d1 = {'a': 1, 'b': 2, 'c': 3}
 d2 = {'b': 2, 'c': 30, 'd': 4}
+# new_dict key: _[_] _ _ _ _._() _ _._()
+# print(_)
 
-new_dict = None
-
+print()
+# ######################################################################################################################
 # suppose we have two dictionaries, and we want to identify items whose keys are not common to both dictionaries
-
 d1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 d2 = {'a': 10, 'b': 20, 'c': 30, 'e': 5}
+# union _._() _ _._()
+# intersection _._() _ _._()
+# keys = _ - _
 
-union = None
-intersection = None
-keys = None
-
-result = None
+result = {}
+# _ key _ :
+#     _[_] = _._(_) _ _._(_)
+# print(_)
 
 # # # # Or, better yet, we could use a dictionary comprehension:
+# result key: _._(_) _ _._(_) _ _ _ _}
+# print(_)
 
+print()
+# ######################################################################################################################
 # In this example we have some dictionaries we use to configure our application.
 # One dictionary specifies some configuration defaults for every configuration parameter our application will need.
 # Another dictionary is used to configure some global configuration,
 # and another set of dictionaries is used to define environment specific configurations, maybe dev and prod.
 
 
-conf_defaults = None  # host', 'port', 'user', 'pwd', 'database'
+# conf_defaults _._(host, por, user, pwd, database)
+# print(_)
 
 conf_global = {
     'port': 5432,
@@ -909,11 +1130,10 @@ conf_prod = {
     'pwd': '$prod_pwd',
     'database': 'deepdive_prod'
 }
-
 # # # # Now we can generate a full configuration for our dev environment this way:
-
-config_dev = None
+# config_dev c_d, c_g, c_d}
+# print(_)
 
 # # # # and a config for our prod environment:
-
-config_prod = None
+# config_prod c_d_, c_g, c_p
+# print(_)
