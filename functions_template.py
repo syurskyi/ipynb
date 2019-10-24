@@ -2039,157 +2039,159 @@ from itertools import product
 # ######################################################################################################################
 # Functions and Methods are callable
 
-callable(print)
-callable(len)
-l = [1, 2, 3]
-callable(l.append)
-s = 'abc'
-callable(s.upper)
-
-print()
+# ca_ print
+# ca_ l_
+# l = [1, 2, 3]
+# ca_ l.a_
+# s = 'abc'
+# ca_ s.u_
+#
+# print()
 # ######################################################################################################################
 # Callables always return a value:
 
-result = print('hello')
-print(result)
-
-l = [1, 2, 3]
-result = l.append(4)
-print(result)
-print(l)
-
-s = 'abc'
-result = s.upper()
-print(result)
-
-print()
+# result _ print hello
+# print result
+#
+# l = [1, 2, 3]
+# result _ l.a_ 4
+# print result
+# print l
+#
+# s _ abc
+# result _ s.u_
+# print result
+#
+# print()
 # ######################################################################################################################
 # Classes are callable:
 
-from decimal import Decimal
-callable(Decimal)
-result = Decimal('10.5')
-print(result)
-
-print()
-# ######################################################################################################################
+# f_ d_ i_ D_
+# ca_ D_
+# result _ D_ 10.5
+# print result
+#
+# print()
+# # ######################################################################################################################
 # Class instances may be callable:
 
-class MyClass:
-    def __init__(self):
-        print('initializing...')
-        self.counter = 0
-
-    def __call__(self, x=1):
-        self.counter += x
-        print(self.counter)
-
-
-my_obj = MyClass()
-callable(my_obj.__init__)
-callable(my_obj.__call__)
-my_obj()
-my_obj()
-my_obj(10)
-
-print()
+# c_ MyClass
+#     ___ __i_ ___
+#         print initializing...'
+#         _.counter = 0
+#
+#     ___ __c_(s_ x_1
+#         _.counter += x
+#         print s_.counter
+#
+# my_obj _ MyClass
+# ca_ my_obj.__i_
+# ca_(my_obj.__c_
+# my_obj()
+# my_obj()
+# my_obj(10)
+#
+# print()
 # ######################################################################################################################
 # Map
 
-The map built-in function is a higher-order function that applies a function to an iterable type object:
+# The map built-in function is a higher-order function that applies a function to an iterable type object:
 
-def fact(n):
-    return 1 if n < 2 else n * fact(n-1)
-
-fact(3)
-fact(4)
-
-map(fact, [1, 2, 3, 4, 5])
-
-The map function returns a map object, which is an iterable - we can either convert that to a list or enumerate it:
-
-l = list(map(fact, [1, 2, 3, 4, 5]))
-print(l)
-
-We can also use it this way:
-
-l1 = [1, 2, 3, 4, 5]
-l2 = [10, 20, 30, 40, 50]
-
-f = lambda x, y: x+y
-
-m = map(f, l1, l2)
-list(m)
-
-print()
+# ___ fact n
+#     r_ 1 __ n < 2 ____ n * fact(n-1)
+#
+# fact 3
+# fact 4
+#
+# m_(fact_ |1 2 3 4 5|
+#
+# # The map function returns a map object, which is an iterable - we can either convert that to a list or enumerate it:
+#
+# l _ l_(m_(fact_ |1 2 3 4 5|
+# print l
+#
+# # We can also use it this way:
+#
+# l1 _ [1, 2, 3, 4, 5]
+# l2 _ [10, 20, 30, 40, 50]
+#
+# f _ l_ x y| x+y
+#
+# m _ m_ f l1 l2
+# l_ m
+#
+# print()
 # ######################################################################################################################
 # Filter
 
-The filter function is a function that filters an iterable based on the truthyness of the elements, or the truthyness of the elements after applying a function to them. Like the map function, the filter function returns an iterable that we can view by generating a list from it, or simply enumerating in a for loop.
+# The filter function is a function that filters an iterable based on the truthyness of the elements,
+# or the truthyness of the elements after applying a function to them. Like the map function,
+# the filter function returns an iterable that we can view by generating a list from it,
+# or simply enumerating in a for loop.
 
-l = [0, 1, 2, 3, 4, 5, 6]
-for e in filter(None, l):
-    print(e)
-
-print()
+# l = [0, 1, 2, 3, 4, 5, 6]
+# ___ e __ f_ N_ l
+#     print e
+#
+# print()
 # ######################################################################################################################
 # is_even with filter
 
-def is_even(n):
-    return n % 2 == 0
-
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-result = filter(is_even, l)
-print(list(result))
-
-Of course, we could just use a lambda expression instead:
-
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-result = filter(lambda x: x % 2 == 0, l)
-print(list(result))
-
-print()
+# ___ is_even n
+#     r_ n % 2 == 0
+#
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# result _ f_ is_even l
+# print(l_ result
+#
+# # Of course, we could just use a lambda expression instead:
+#
+# l _ [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# result _ f_(l_ x| x % 2 __ 0_ l
+# print l_ result
+#
+# print()
 # ######################################################################################################################
 # Map using a list comprehension
 
-l = [1, 2, 3, 4, 5]
-result = [fact(i) for i in l]
-print(result)
-
-print()
+# l = [1, 2, 3, 4, 5]
+# result _ |f_(i) ___ i __ l|
+# print result
+# 
+# print()
 # ######################################################################################################################
 # The zip built-in function will take one or more iterables,
 # and generate an iterable of tuples where each tuple contains one element from each iterable:
 
-l1 = 1, 2, 3
-l2 = 'a', 'b', 'c'
-list(zip(l1, l2))
-
-l1 = 1, 2, 3
-l2 = [10, 20, 30]
-l3 = ('a', 'b', 'c')
-list(zip(l1, l2, l3))
-
-l1 = [1, 2, 3]
-l2 = (10, 20, 30)
-l3 = 'abc'
-list(zip(l1, l2, l3))
-
-l1 = range(100)
-l2 = 'python'
-list(zip(l1, l2))
-
-print()
+# l1 = 1, 2, 3
+# l2 = 'a', 'b', 'c'
+# l_ z_ l1 l2
+# 
+# l1 = 1, 2, 3
+# l2 = [10, 20, 30]
+# l3 = ('a', 'b', 'c')
+# l_(z_ l1 l2 l3
+# 
+# l1 = [1, 2, 3]
+# l2 = (10, 20, 30)
+# l3 = 'abc'
+# l_(z_ l1 l2 l3
+# 
+# l1 = range(100)
+# l2 = 'python'
+# l_(z l1 l2
+# 
+# print()
 # ######################################################################################################################
 # Using the zip function we can now add our two lists element by element as follows:
 
-l1 = [1, 2, 3, 4, 5]
-l2 = [10, 20, 30, 40, 50]
-result = [i + j for i,j in zip(l1,l2)]
-print(result)
-
-print()
-# ######################################################################################################################
+# l1 = [1, 2, 3, 4, 5]
+# l2 = [10, 20, 30, 40, 50]
+# result _ |i + j ___ i_j __ z_ l1l2_ |
+# print result
+# 
+# print()
+# # ######################################################################################################################
 # Filtering using a comprehension
 
 l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
