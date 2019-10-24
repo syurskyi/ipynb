@@ -528,7 +528,7 @@
 # ___ f_a_  # a is assigned to (references) passed object
 #     a = 99  # Changes local variable a only
 
-b = 88
+# b = 88
 # f(b)  # a and b both reference same 88 initially
 # print(b)  # b is not changed
 
@@ -536,17 +536,17 @@ b = 88
 #     a = 2  # Changes local name's value only
     # b_0_  'spam'  # Changes shared object in-place
 
-X = 1
-L = [1, 2]  # Caller
+# X = 1
+# L = [1, 2]  # Caller
 # c_(X, L)  # Pass immutable and mutable objects
 # X, L  # X is unchanged, L is different!
 
-X = 1
-a = X  # They share the same object
-a = 2  # Resets 'a' only, 'X' is still 1
+# X = 1
+# a = X  # They share the same object
+# a = 2  # Resets 'a' only, 'X' is still 1
 # print(X)
 
-L = [1, 2]
+# L = [1, 2]
 # b = L  # They share the same object
 # b_0_ _ 'spam'  # In-place change: 'L' sees the change too
 # print(L)
@@ -559,9 +559,9 @@ L = [1, 2]
 #     a = 2
 #     b_0_ = 'spam'
 
-X = 1
+# X = 1
 
-L = [1, 2]
+# L = [1, 2]
 # c__X L_:_  # Pass a copy, so our 'L' does not change
 
 # print(X)
@@ -573,7 +573,7 @@ L = [1, 2]
 #     b_0_ = 'spam'  # Changes our list copy only
 
 
-L = [1, 2]
+# L = [1, 2]
 # changer(X, tuple(L))    # Pass a tuple, so changes are errors
 
 # print()
@@ -585,8 +585,8 @@ L = [1, 2]
 #     y = [3, 4]
 #     x, y  # Return new values in a tuple
 
-X = 1
-L = [1, 2]
+# X = 1
+# L = [1, 2]
 
 # X, L = _(X, L)  # Assign results to caller's names
 # print(X, L)
@@ -630,7 +630,7 @@ L = [1, 2]
 # func(toast=1, eggs=2, spam=3)  # Output: (3, 2, 1, 0)
 # func(1, 2, 3, 4)  # Output: (1, 2, 3, 4)
 
-print()
+# print()
 # ######################################################################################################################
 # Applying functions generically
 
@@ -1204,13 +1204,13 @@ print()
 # ######################################################################################################################
 # advanced_closure_example
 
-"""Демонстрация часто допускаемой ошибки и способа её решения"""
+# """Демонстрация часто допускаемой ошибки и способа её решения"""
 
 # ___ make_powers n
-    """Функция, возвращающая список функций, каждая из которых вычисляет
-    степень аргумента, равную данному индексу плюс 1
-    (неправильная реализация)
-    """
+#     """Функция, возвращающая список функций, каждая из которых вычисляет
+#     степень аргумента, равную данному индексу плюс 1
+#     (неправильная реализация)
+#     """
 
 #     functions = ||
 #
@@ -1236,8 +1236,8 @@ print()
 # переменную в лямбда-выражении -- это создать параметр функции.
 
 # ___ make_powers n
-    """Функция, возвращающая список функций, каждая из которых вычисляет
-    степень аргумента, равную данному индексу плюс 1"""
+#     """Функция, возвращающая список функций, каждая из которых вычисляет
+#     степень аргумента, равную данному индексу плюс 1"""
 
 # print()
 # ######################################################################################################################
@@ -2157,7 +2157,7 @@ from itertools import product
 # l = [1, 2, 3, 4, 5]
 # result _ |f_(i) ___ i __ l|
 # print result
-# 
+#
 # print()
 # ######################################################################################################################
 # The zip built-in function will take one or more iterables,
@@ -2166,21 +2166,21 @@ from itertools import product
 # l1 = 1, 2, 3
 # l2 = 'a', 'b', 'c'
 # l_ z_ l1 l2
-# 
+#
 # l1 = 1, 2, 3
 # l2 = [10, 20, 30]
 # l3 = ('a', 'b', 'c')
 # l_(z_ l1 l2 l3
-# 
+#
 # l1 = [1, 2, 3]
 # l2 = (10, 20, 30)
 # l3 = 'abc'
 # l_(z_ l1 l2 l3
-# 
+#
 # l1 = range(100)
 # l2 = 'python'
 # l_(z l1 l2
-# 
+#
 # print()
 # ######################################################################################################################
 # Using the zip function we can now add our two lists element by element as follows:
@@ -2189,1083 +2189,1019 @@ from itertools import product
 # l2 = [10, 20, 30, 40, 50]
 # result _ |i + j ___ i_j __ z_ l1l2_ |
 # print result
-# 
+#
 # print()
 # # ######################################################################################################################
 # Filtering using a comprehension
 
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-result = [i for i in l if i % 2 == 0]
-print(result)
-
-print()
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# result _ |i ___ i __ l __ i % 2 __ 0|
+# print result
+#
+# print()
 # ######################################################################################################################
 # Combining map and filter
 
-list(filter(lambda y: y < 25, map(lambda x: x**2, range(10))))
-
-# Alternatively, we can use a list comprehension to do the same thing:
-
-[x**2 for x in range(10) if x**2 < 25]
-
-print()
+# l_ f_ l_ y| y < 25_ m_(l_ x| x**2_ r_ 10
+#
+# # Alternatively, we can use a list comprehension to do the same thing:
+#
+# |x**2 ___ x __ r_ 10 __ x**2 < 25|
+#
+# print()
 # ######################################################################################################################
 # Suppose we want to find the maximum value in a list:
 #
 # First we define a function that returns the maximum of two arguments:
 
-l = [5, 8, 6, 10, 9]
-
-_max = lambda a, b: a if a > b else b
-
-def max_sequence(sequence):
-    result = sequence[0]
-    for x in sequence[1:]:
-        result = _max(result, x)
-    return result
-
-max_sequence(l)
-
-print()
+# l = [5, 8, 6, 10, 9]
+#
+# _max = l_ a_ b| a __ a > b e_ b
+#
+# ___ max_sequence sequence
+#     result _ sequence[0]
+#     ___ x __ sequence[1:]:
+#         result = _max(result, x)
+#     r_ result
+#
+# max_sequence l
+#
+# print()
 # ######################################################################################################################
 # To calculate the minimum, all we need to do is to change the function that is repeatedly applied
-
-l = [5, 8, 6, 10, 9]
-
-_min = lambda a, b: a if a < b else b
-
-def min_sequence(sequence):
-    result = sequence[0]
-    for x in sequence[1:]:
-        result = _min(result, x)
-    return result
-
-print(l)
-print(min_sequence(l))
-
-print()
+#
+# l = [5, 8, 6, 10, 9]
+#
+# _min = l_ a_ b| a __ a < b e_ b
+#
+# ___ min_sequence sequence
+#     result _ sequence|0|
+#     ___ x __ sequence|1_|
+#         result _ _m_ re__ x
+#     r_ result
+#
+# print l
+# print min_sequence l
+#
+# print()
 # ######################################################################################################################
 # Maximum and Minimum
 # Using Reducing Functions
+#
+# l = [5, 8, 6, 10, 9]
+# _max = l_ a_ b| a __ a > b e_ b
+# _min = l_ a_ b| a __ a < b e_ b
+#
+# ___ _reduce fn sequence
+#     result _ sequence|0|
+#     ___ x __ sequence|1_|
+#         result _ fn result x
+#     r_ result
+#
+# _reduce _max l
+# _reduce _min l
 
-l = [5, 8, 6, 10, 9]
-_max = lambda a, b: a if a > b else b
-_min = lambda a, b: a if a < b else b
-
-def _reduce(fn, sequence):
-    result = sequence[0]
-    for x in sequence[1:]:
-        result = fn(result, x)
-    return result
-
-_reduce(_max, l)
-_reduce(_min, l)
-
-We could even just use a lambda directly in the call to _reduce:
-
-_reduce(lambda a, b: a if a > b else b, l)
-_reduce(lambda a, b: a if a < b else b, l)
-
-print()
+# We could even just use a lambda directly in the call to _reduce:
+#
+# _reduce(l_ a_ b| a __ a > b e_ b_ l
+# _reduce(l_ a_ b| a __ a < b e_ b_ l
+#
+# print()
 # ######################################################################################################################
 # Python actually implements a reduce function, which is found in the functools module.
 # Unlike our _reduce function, it can handle any iterable, not just sequences.
 
-from functools import reduce
-l = [5, 8, 6, 10, 9]
-l
-reduce(lambda a, b: a if a > b else b, l)
-reduce(lambda a, b: a if a < b else b, l)
-reduce(lambda a, b: a if a < b else b, l)
-reduce(lambda a, b: a + b, l)
-
-print()
+# f_ f_ i_ r_
+# l = [5, 8, 6, 10, 9]
+# l
+# r_(l_ a_ b| a __ a > b e_ b_ l)
+# r_(l_ a_ b| a __ a < b e_ b_ l)
+# r_(l_ a_ b| a __ a < b e_ b_ l)
+# r_(l_ a_ b| a + b_ l)
+#
+# print()
 # ######################################################################################################################
 # Finding the max and min of an iterable is such a common thing that Python provides a built-in function to do just that:
 
-l = [5, 8, 6, 10, 9]
-max(l), min(l)
-sum(l)
-
-print()
-# ######################################################################################################################
+# l = [5, 8, 6, 10, 9]
+# m_ l, m_ l
+# s_ l
+#
+# print()
+# # ######################################################################################################################
 # The any and all built-ins
-
-l = [0, 1, 2]
-any(l)
-
-l = [0, 0, 0]
-any(l)
-
-print()
+#
+# l = [0, 1, 2]
+# a_ l
+#
+# l = [0, 0, 0]
+# a_ l
+#
+# print()
 # ######################################################################################################################
 # On the other hand, all will return True if every element of the iterable is truthy:
 
-l = [0, 1, 2]
-all(l)
-
-l = [1, 2, 3]
-all(l)
-
-print()
+# l = [0, 1, 2]
+# a_(l)
+#
+# l = [1, 2, 3]
+# a_(l)
+#
+# print()
 # ######################################################################################################################
 # We can implement any functions ourselves using reduce if we choose to - simply use the Boolean or or and operators as
 # the function passed to reduce to implement any and all respectively.
 
-l = [0, 1, 2]
-reduce(lambda a, b: bool(a or b), l)
-
-l = [0, 0, 0]
-reduce(lambda a, b: bool(a or b), l)
-
-print()
+# l = [0, 1, 2]
+# r_(l_ a_ b| b_(a o_ b)_ l)
+#
+# l = [0, 0, 0]
+# r_(l_ a_ b| b_(a o_ b)_ l)
+#
+# print()
 # ######################################################################################################################
 # We can implement all functions ourselves using reduce if we choose to - simply use the Boolean or or and operators as
 # the function passed to reduce to implement any and all respectively.
 
-l = [0, 1, 2]
-reduce(lambda a, b: bool(a and b), l)
-
-l = [1, 2, 3]
-reduce(lambda a, b: bool(a and b), l)
-
-print()
+# l = [0, 1, 2]
+# r_(l_ a_ b| b_(a a_ b)_ l)
+#
+# l = [1, 2, 3]
+# r_(l_ a_ b| b_(a a_ b)_ l)
+#
+# print()
 # ######################################################################################################################
 # Partial Functions
 
-from functools import partial
-def my_func(a, b, c):
-    print(a, b, c)
-f = partial(my_func, 10)
-f(20, 30)
-
-We could have done this using another function (or a lambda) as well:
-
-def partial_func(b, c):
-    return my_func(10, b, c)
-
-or, using a lambda:
-
-fn = lambda b, c: my_func(10, b, c)
-fn(20, 30)
-
-print()
+# f_ fu_ i_ pa_
+# ___ my_func a b c
+#     print a b c
+# f _ p_ my_func 10
+# f 20 30
+#
+# # We could have done this using another function (or a lambda) as well:
+#
+# ___ partial_func b c
+#     r_ my_func 10 b c
+#
+# # or, using a lambda:
+#
+# fn _ l_ b_ c| my_func 10 b c
+# fn 20 30
+#
+# print()
 # ######################################################################################################################
 # Partial Functions
 # it is quite flexible with parameters:
 
-def my_func(a, b, *args, k1, k2, **kwargs):
-    print(a, b, args, k1, k2, kwargs)
-
-f = partial(my_func, 10, k1='a')
-f(20, 30, 40, k2='b', k3='c')
-
-We can of course do the same thing using a regular function too:
-
-def f(b, *args, k2, **kwargs):
-    return my_func(10, b, *args, k1='a', k2=k2, **kwargs)
-
-f(20, 30, 40, k2='b', k3='c')
-
-print()
+# ___ my_func a b _args k1 k2 __kwargs
+#     print a b args k1 k2 kwargs
+#
+# f - p_ my_func 10 k1-|a|
+# f 20 30 40 k2-|b| k3-|c|
+#
+# # We can of course do the same thing using a regular function too:
+#
+# ___ f b _args k2 __kwargs
+#     r_ my_func 10 b _args k1_|a| k2_k2 __kwargs
+#
+# f 20 30 40 k2_|b| k3_|c|
+#
+# print()
 # ######################################################################################################################
 # Partial Functions
 # you are not stuck having to specify the first argument in your partial:
 
-def power(base, exponent):
-    return base ** exponent
-
-power(2, 3)
-square = partial(power, exponent=2)
-square(4)
-cube = partial(power, exponent=3)
-cube(2)
-
-cube(base=3)
-
-print()
+# ___ power base exponent
+#     r_ base ** exponent
+#
+# power 2 3
+# square _ p_ power exponent_2
+# square 4
+# cube _ p_ power exponent_3
+# cube 2
+#
+# cube base_3
+#
+# print()
 # ######################################################################################################################
 # suppose we have points (represented as tuples), and we want to sort them based on the distance of the point from
 # some other fixed point:
 
-origin = (0, 0)
-l = [(1,1), (0, 2), (-3, 2), (0,0), (10, 10)]
-dist2 = lambda x, y: (x[0]-y[0])**2 + (x[1]-y[1])**2
-dist2((0,0), (1,1))
-sorted(l, key = lambda x: dist2((0,0), x))
-sorted(l, key=partial(dist2, (0,0)))
-
-print()
+# origin = (0, 0)
+# l = [(1,1), (0, 2), (-3, 2), (0,0), (10, 10)]
+# dist2 = l_ x_ y| (x|0|-y|0|)**2 + (x|1|-y|1|)**2
+# dist2((0,0), (1,1))
+# s_(l, key _ l_ x| dist2((0,0)_ x))
+# s_(l, key_p_(dist2, (0,0)))
+#
+# print()
 # ######################################################################################################################
 #  we have some generic email() function that can be used to notify someone when various things happen
 #  in our application. But depending on what is happening we may want to notify different people.
 
-def sendmail(to, subject, body):
-    # code to send email
-    print('To:{0}, Subject:{1}, Body:{2}'.format(to, subject, body))
-
-Now, we may haver different email adresses we want to send notifications to, maybe defined in a config file in our app. Here, I'll just use hardcoded variables:
-
-email_admin = 'palin@python.edu'
-email_devteam = 'idle@python.edu;cleese@python.edu'
-
-Now when we want to send emails we would have to write things like:
-
-sendmail(email_admin, 'My App Notification', 'the parrot is dead.')
-sendmail(';'.join((email_admin, email_devteam)), 'My App Notification', 'the ministry is closed until further notice.')
-
-We could simply our life a little using partials this way:
-
-send_admin = partial(sendmail, email_admin, 'For you eyes only')
-send_dev = partial(sendmail, email_devteam, 'Dear IT:')
-send_all = partial(sendmail, ';'.join((email_admin, email_devteam)), 'Loyal Subjects')
-
-send_admin('the parrot is dead.')
-send_all('the ministry is closed until further notice.')
-
-Finally, let's make this a little more complex, with a mixture of positional and keyword-only argument
-
-print()
+# ___ sendmail to subject body
+#     # code to send email
+#     print('To:|0|, Subject:|1|, Body:|2|'.f_ to subject body
+#
+# # Now, we may haver different email adresses we want to send notifications to, maybe defined in a config file in our app.
+# # Here, I'll just use hardcoded variables:
+#
+# email_admin = 'palin@python.edu'
+# email_devteam = 'idle@python.edu;cleese@python.edu'
+#
+# # Now when we want to send emails we would have to write things like:
+#
+# sendmail(email_admin, 'My App Notification', 'the parrot is dead.')
+# sendmail(';'.j_ email_admin email_devteam _ 'My App Notification', 'the ministry is closed until further notice.')
+#
+# # We could simply our life a little using partials this way:
+#
+# send_admin = p_(sendmail, email_admin, 'For you eyes only')
+# send_dev = p_(sendmail, email_devteam, 'Dear IT:')
+# send_all = p_(sendmail, ';'.j_((email_admin, email_devteam)), 'Loyal Subjects')
+#
+# send_admin('the parrot is dead.')
+# send_all('the ministry is closed until further notice.')
+#
+# # Finally, let's make this a little more complex, with a mixture of positional and keyword-only argument
+#
+# print()
 # ######################################################################################################################
 # Functions defined inside anther function can reference variables from that enclosing scope,
 # just like functions can reference variables from the global scope.
 
-def outer_func():
-    x = 'hello'
-
-    def inner_func():
-        print(x)
-
-    inner_func()
-
-
-outer_func()
-
-print()
+# ___ outer_func
+#     x _ 'hello'
+#
+#     ___ inner_func
+#         print(x)
+#
+#     inner_func()
+#
+# outer_func()
+#
+# print()
 # ######################################################################################################################
 # if we assign a value to a variable, it is considered part of the local scope, and potentially masks enclsogin scope
 # variable names:
-
-x = 'hello'
-def inner():
-    nonlocal x
-    x = 'python'
-inner()
-print(x)
-
-outer()
+#
+# x _ 'hello'
+# ___ inner
+#     no_ x
+#     x _ python'
+# inner()
+# print(x)
+#
+# outer()
 
 # Of course, this can work at any level as well:
 
-def outer():
-    x = 'hello'
-
-    def inner1():
-        def inner2():
-            nonlocal
-            x
-            x = 'python'
-
-        inner2()
-
-    inner1()
-    print(x)
-
-
-outer()
-
-print()
+# ___ outer
+#     x _ 'hello'
+#
+#     ___ inner1
+#         ___ inner2
+#             no_
+#             x
+#             x _ 'python'
+#
+#         inner2
+#
+#     inner1
+#     print x
+#
+# outer()
+#
+# print()
 # ######################################################################################################################
 # Let's examine that concept of a cell to create an indirect reference for variables that are in multiple scopes.
 
-def outer():
-    x = 'python'
-    def inner():
-        print(x)
-    return inner
-
-fn = outer()
-fn.__code__.co_freevars
-fn.__closure__
-
-print()
+# ___ outer
+#     x _ 'python'
+#     ___ inner
+#         print x
+#     r_ inn_
+#
+# fn _ out___
+# fn.__c_.c_f_
+# fn.__c_
+#
+# print()
 # ######################################################################################################################
 # Modifying the Free Variable
 # We know we can modify nonlocal variables by using the nonlocal keyword. So the following will work:
 
-def counter():
-    count = 0  # local variable
-
-    def inc():
-        nonlocal
-        count  # this is the count variable in counter
-        count += 1
-        return count
-
-    return inc
-
-
-c = counter()
-c()
-c()
-
-print()
+# ___ counter
+#     count _ 0  # local variable
+#
+#     ___ inc
+#         no_
+#         co____  # this is the count variable in counter
+#         co___ += 1
+#         r_ co___
+#
+#     r_ inc
+#
+# c = co____
+# c()
+# c()
+#
+# print()
 # ######################################################################################################################
 # Shared Extended Scopes
-
-def outer():
-    count = 0
-
-    def inc1():
-        nonlocal
-        count
-        count += 1
-        return count
-
-    def inc2():
-        nonlocal
-        count
-        count += 1
-        return count
-
-    return inc1, inc2
-
-
-fn1, fn2 = outer()
-fn1.__closure__, fn2.__closure__
-
-# As you can see here, the count label points to the same cell.
-
-fn1()
-fn1()
-fn2()
-
-print()
+#
+# ___ outer
+#     count _ 0
+#
+#     ___ inc1
+#         no__
+#         co__
+#         co__ += 1
+#         r_ co__
+#
+#     ___ inc2
+#         no__
+#         co__
+#         co__ += 1
+#         r_ co__
+#
+#     r_ inc1 inc2
+#
+# fn1, fn2 = outer()
+# fn1.__c_, fn2.__c_
+#
+# # As you can see here, the count label points to the same cell.
+#
+# fn1()
+# fn1()
+# fn2()
+#
+# print()
 # ######################################################################################################################
 # Multiple Instances of Closures
 # Recall that every time a function is called, a new local scope is created.
 
-from time import perf_counter
-
-def func():
-    x = perf_counter()
-    print(x, id(x))
-
-func()
-func()
-
-print()
+# f_ t_ i_ p_c_
+#
+# ___ func
+#     x _ p_c_
+#     print x id x
+#
+# func()
+# func()
+#
+# print()
 # ######################################################################################################################
 # Multiple Instances of Closures
 # The same thing happens with closures, they have their own extended scope every time the closure is created:
 
-def pow(n):
-    # n is local to pow
-    def inner(x):
-        # x is local to inner
-        return x ** n
-    return inner
+# ___ pow n
+#     # n is local to pow
+#     ___ inner x
+#         # x is local to inner
+#         r_ x ** n
+#     r_ inner
 
-In this example, n, in the function inner is a free variable, so we have a closure that contains inner and the free variable n
+# In this example, n, in the function inner is a free variable, so we have a closure that contains inner and the free variable n
 
-square = pow(2)
-square(5)
-cube = pow(3)
-cube(5)
+# square _ pow 2
+# square 5
+# cube _ pow 3
+# cube 5
 
-We can see that the cell used for the free variable in both cases is different:
+# We can see that the cell used for the free variable in both cases is different:
 
-square.__closure__
-cube.__closure__
-
-print()
+# square.__c_
+# cube.__c_
+#
+# print()
 # ######################################################################################################################
 # we wrote a simple closure to count how many times a function had been run:
 
-def counter(fn):
-    count = 0
-
-    def inner(*args, **kwargs):
-        nonlocal
-        count
-        count += 1
-        print('Function {0} was called {1} times'.format(fn.__name__, count))
-        return fn(*args, **kwargs)
-
-    return inner
-
-
-def add(a, b=0):
-    """
-    returns the sum of a and b
-    """
-    return a + b
-
-
-add = counter(add)
-add(1, 2)
-add(2, 2)
-
-print()
+# ___ counter fn
+#     count _ 0
+#
+#     ___ inner _args __kwargs
+#         no___
+#         co__
+#         co__ += 1
+#         print('Function |0| was called |1| times'.f_ fn.__n_ count
+#         r_ fn _args __kwargs
+#
+#     r_ inner
+#
+# ___ add a b_0
+#     """
+#     returns the sum of a and b
+#     """
+#     r_ a + b
+#
+# add _ counter add
+# add 1 2
+# add 2 2
+#
+# print()
 # ######################################################################################################################
 # call that counter function a decorator.
 
-def counter(fn):
-    count = 0
-
-    def inner(*args, **kwargs):
-        nonlocal
-        count
-        count += 1
-        print('Function {0} was called {1} times'.format(fn.__name__, count))
-        return fn(*args, **kwargs)
-
-    return inner
-
-
-@counter
-def mult(a: float, b: float = 1, c: float = 1) -> float:
-    """
-    returns the product of a, b, and c
-    """
-    return a * b * c
-
-
-mult(1, 2, 3)
-mult(2, 2, 2)
-
-Let
-'s do a little bit of introspection on our two decorated functions:
-
-add.__name__
-mult.__name__
-
-print()
+# ___ counter fn
+#     count _ 0
+#
+#     ___ inner _args __kwargs
+#         no__
+#         co__
+#         co__ += 1
+#         print('Function |0| was called |1| times'.f_fn.__n_ co__
+#         r_ fn _args __kwargs
+#
+#     r_ inner
+#
+# _counter
+# ___ mult a| float b| float _ 1 c| float _ 1) __ float
+#     """
+#     returns the product of a, b, and c
+#     """
+#     r_ a * b * c
+#
+# mult 1 2 3
+# mult 2 2 2
+#
+# # Let's do a little bit of introspection on our two decorated functions:
+#
+# add.__n_
+# mult.__n_
+#
+# print()
 # ######################################################################################################################
 # We can use a special function in the functools module, called wraps. In fact, that function is a decorator itself!
 
-from functools import wraps
-
-
-def counter(fn):
-    count = 0
-
-    @wraps(fn)
-    def inner(*args, **kwargs):
-        nonlocal
-        count
-        count += 1
-        print("{0} was called {1} times".format(fn.__name__, count))
-
-    return inner
-
-
-@counter
-def add(a: int, b: int = 10) -> int:
-    """
-    returns sum of two integers
-    """
-    return a + b
-
-
-inspect.getsource(add)
-inspect.signature(add)
-inspect.signature(add).parameters
-
-print()
+# f_ f_ i_ w_
+#
+# ___ counter fn
+#     count _ 0
+#
+#     _wraps fn
+#     ___ inner _args __kwargs
+#         no__
+#         co__
+#         co__ += 1
+#         print("|0| was called |1| times".f_ fn.__n_ co__
+#
+#     r_ inner
+#
+# _counter
+# ___ add a| int__ b| int _ 10 __ int
+#     """
+#     returns sum of two integers
+#     """
+#     r_ a + b
+#
+# i_.g_ add
+# i_.s_ add
+# i_.s_ add.p_
+#
+# print()
 # ######################################################################################################################
 # Simulating a simple Switch in Python
 
-def dow_switch_fn(dow):
-    if dow == 1:
-        fn = lambda: print('Monday')
-    elif dow == 2:
-        fn = lambda: print('Tuesday')
-    elif dow == 3:
-        fn = lambda: print('Wednesday')
-    elif dow == 4:
-        fn = lambda: print('Thursday')
-    elif dow == 5:
-        fn = lambda: print('Friday')
-    elif dow == 6:
-        fn = lambda: print('Saturday')
-    elif dow == 7:
-        fn = lambda: print('Sunday')
-    else:
-        fn = lambda: print('Invalid day of week')
-
-    return fn()
-
-
-dow_switch_fn(1)
-dow_switch_fn(100)
-
-print()
+# ___ dow_switch_fn dow
+#     __ dow __ 1
+#         fn _ l_: print Monday
+#     e__ dow __ 2
+#         fn _ l_: print Tuesday
+#     e__ dow __ 3
+#         fn _ l_: print Wednesday
+#     e__ dow __ 4:
+#         fn _ l_: print Thursday
+#     e___ dow __ 5:
+#         fn _ l_: print Friday
+#     e___ dow __ 6:
+#         fn _ l_: print Saturday
+#     e___ dow == 7:
+#         fn = l_: print Sunday
+#     e___
+#         fn = l_: print Invalid day of week
+#
+#     r_ fn()
+#
+# dow_switch_fn 1
+# dow_switch_fn 100
+#
+# print()
 # ######################################################################################################################
 # Simulating a simple Switch in Python
 # dictionaries could also be used quite effectively here:
 
-def dow_switch_dict(dow):
-    dow_dict = {
-        1: lambda: print('Monday'),
-        2: lambda: print('Tuesday'),
-        3: lambda: print('Wednesday'),
-        4: lambda: print('Thursday'),
-        5: lambda: print('Friday'),
-        6: lambda: print('Saturday'),
-        7: lambda: print('Sunday'),
-        'default': lambda: print('Invalid day of week')
-    }
-
-    return dow_dict.get(dow, dow_dict['default'])()
-
-
-dow_switch_dict(1)
-dow_switch_dict(100)
-
-print()
+# ___ dow_switch_dict dow
+#     dow_dict _ {
+#         1: l_: print Monday
+#         2: l_: print Tuesday
+#         3: l_: print Wednesday
+#         4: l_: print Thursday
+#         5: l_: print Friday
+#         6: l_: print Saturday
+#         7: l_: print Sunday
+#         'default': l_: print Invalid day of week
+#     }
+#
+#     r_ dow_dict.g_ dow dow_d_|_default_|
+#
+# dow_switch_dict 1
+# dow_switch_dict 100
+#
+# print()
 # ######################################################################################################################
 # Simulating a simple Switch in Python
 # recall our own implementation of the @singledispatch decorator:
-
-def switcher(fn):
-    registry = dict()
-    registry['default'] = fn
-
-    def register(case):
-        def inner(fn):
-            registry[case] = fn
-            return fn  # we do this so we can stack register decorators!
-
-        return inner
-
-    def decorator(case):
-        fn = registry.get(case, registry['default'])
-        return fn()
-
-    decorator.register = register
-    return decorator
-
-
-@switcher
-def dow():
-    print('Invalid day of week')
-
-
-@dow.register(1)
-def dow_1():
-    print('Monday')
-
-
-dow.register(2)(lambda: print('Tuesday'))
-dow.register(3)(lambda: print('Wednesday'))
-dow.register(4)(lambda: print('Thursday'))
-dow.register(5)(lambda: print('Friday'))
-dow.register(6)(lambda: print('Saturday'))
-dow.register(7)(lambda: print('Sunday'))
-
-dow(1)
-dow(2)
-dow(100)
-
-print()
+#
+# ___ switcher fn
+#     registry _ d_
+#     registry|_default_| _ fn
+#
+#     ___ register case
+#         ___ inner fn
+#             registry|case| _ fn
+#             r_ fn  # we do this so we can stack register decorators!
+#
+#         r_ inner
+#
+#     ___ decorator case
+#         fn _ registry.g_ case registry|_default_|
+#         r_ fn()
+#
+#     decorator.register _ register
+#     r_ decorator
+#
+# _switcher
+# ___ dow
+#     print Invalid day of week
+#
+# _dow.register 1
+# ___ dow_1(
+#     print Monday
+#
+# dow.r_(2)(l_| print Tuesday
+# dow.r_(3)(l_| print Wednesday
+# dow.r_(4)(l_| print Thursday
+# dow.r_(5)(l_| print Friday
+# dow.r_(6)(l_| print Saturday
+# dow.r_(7)(l_| print Sunday
+#
+# dow(1)
+# dow(2)
+# dow(100)
+#
+# print()
 # ######################################################################################################################
 # Introduction to Decorators
 # be_polite
 
-def be_polite(fn):
-    def wrapper():
-        print("What a pleasure to meet you!")
-        fn()
-        print("Have a great day!")
-    return wrapper
-
-
-def greet():
-    print("My name is Colt.")
-
-
-def rage():
-    print("I HATE YOU!")
-
-# we are decorating our function
-# with politeness!
-
-
-greet = be_polite(greet)
-
-polite_rage = be_polite(rage)
-polite_rage()
-
-print()
+# ___ be_politefn
+#     ___ wrapper
+#         print "What a pleasure to meet you!"
+#         fn()
+#         print Have a great day!
+#     r_ wr__
+#
+# ___ greet
+#     print My name is Colt.
+#
+# ___ rage
+#     print I HATE YOU!
+#
+# # we are decorating our function
+# # with politeness!
+#
+# greet _ be_polite greet
+#
+# polite_rage _ be_polite rage
+# polite_rage()
+#
+# print()
 # ######################################################################################################################
 # Introduction to Decorators_decorate-syntax - be polite
 
-def be_polite(fn):
-    def wrapper():
-        print("What a pleasure to meet you!")
-        fn()
-        print("Have a great day!")
-    return wrapper
-
-
-@be_polite
-def greet():
-    print("My name is Colt.")
-
-
-@be_polite
-def rage():
-    print("I HATE YOU!")
-
-
-greet()
-rage()
-
-print()
-# ######################################################################################################################
+# ___ be_polite fn
+#     ___ wrapper
+#         print What a pleasure to meet you!
+#         fn()
+#         print Have a great day!
+#     r_ wr___
+#
+# _be_polite
+# ___ greet
+#     print My name is Colt.
+#
+# _be_polite
+# ___ rage
+#     print I HATE YOU!
+#
+# greet()
+# rage()
+#
+# print()
+# # ######################################################################################################################
 #  Decorators With Different Signatures
 # shout example
 
-ef shout(fn):
-    def wrapper(*args, **kwargs):
-        return fn(*args, **kwargs).upper()
-    return wrapper
-
-
-@shout
-def greet(name):
-    return f"Hi, I'm {name}."
-
-
-@shout
-def order(main, side):
-    return f"Hi, I'd like the {main}, with a side of {side}, please."
-
-
-@shout
-def lol():
-    return "lol"
-
-
-print(greet("todd"))
-print(order(side="burger", main="fries"))
-print(lol())
-
-print()
-# ######################################################################################################################
+# ___ shout fn
+#     ___ wrapper _args __kwargs
+#         r_ fn _args __kwargs.u_
+#     r_ wr__
+#
+# _shout
+# ___ greet name
+#     r_ f"Hi, I'm |name|."
+#
+# _shout
+# ___ order main side
+#     r_ _"Hi, I'd like the |main|, with a side of |side|, please."
+#
+# _shout
+# ___ lol
+#     r_ "lol"
+#
+# print greet("todd")
+# print(order(side_"burger" main_"fries"))
+# print(lol())
+#
+# print()
+# # ######################################################################################################################
 # Using Wraps To Preserve Metadata
 
-from functools import wraps
-
-
-def log_function_data(fn):
-    @wraps(fn)
-    def wrapper(*args, **kwargs):
-        """I AM WRAPPER FUNCTION"""
-        print(f"you are about to call {fn.__name__}")
-        print(f"Here's the documentation: {fn.__doc__}")
-        return fn(*args, **kwargs)
-    return wrapper
-
-
-@log_function_data
-def add(x, y):
-    """Adds two numbers together."""
-    return x + y
-
-
-print(add.__doc__)
-print(add.__name__)
-help(add)
-
-print()
+# f_ f_ i_ w_
+#
+# ___ log_function_data fn
+#     _wraps fn
+#     ___ wrapper _args __kwargs
+#         """I AM WRAPPER FUNCTION"""
+#         print _"you are about to call |fn.__n_|"
+#         print _"Here's the documentation: |fn.__d_|")
+#         r_ fn _args __kwargs
+#     r_ wr_
+#
+# _log_function_data
+# ___ add x y
+#     """Adds two numbers together."""
+#     r_ x + y
+#
+# print add.__d_
+# print(add.__n_
+# help add
+#
+# print()
 # ######################################################################################################################
 # Building A Speed-Test Decorator
 
-from functools import wraps
-from time import time
-
-
-def speed_test(fn):
-    @wraps(fn)
-    def wrapper(*args, **kwargs):
-        start_time = time()
-        result = fn(*args, **kwargs)
-        end_time = time()
-        print(f"Executing {fn.__name__}")
-        print(f"Time Elapsed: {end_time - start_time}")
-        return result
-    return wrapper
-
-
-@speed_test
-def sum_nums_gen():
-    return sum(x for x in range(90000000))
-
-
-@speed_test
-def sum_nums_list():
-    return sum([x for x in range(90000000)])
-
-
-print(sum_nums_gen())
-print(sum_nums_list())
-
-print()
+# f_ f_ i_ w_
+# f_ t_ i_ t_
+#
+# ___ speed_test fn
+#     _wraps fn
+#     ___ wrapper _args __kwargs
+#         start_time _ time
+#         result _ fn _args __kwargs
+#         end_time _ time
+#         print _"Executing |fn.__n_|"
+#         print _"Time Elapsed: |end_time - start_time|")
+#         r_ res___
+#     r_ wra___
+#
+# _speed_test
+# ___ sum_nums_gen
+#     r_ s_(x ___ x __ r_(90000000))
+#
+# _speed_test
+# ___ sum_nums_list
+#     r_ s_([x ___ x __ r_(90000000)])
+#
+# print sum_nums_gen
+# print sum_nums_list
+#
+# print()
 # ######################################################################################################################
 # Another Example Ensuring Args With A Decorator
-from functools import wraps
-
-
-def ensure_no_kwargs(fn):
-    @wraps(fn)
-    def wrapper(*args, **kwargs):
-        if kwargs:
-            raise ValueError("No kwargs allowed! sorry :(")
-        return fn(*args, **kwargs)
-    return wrapper
-
-
-@ensure_no_kwargs
-def greet(name):
-    print(f"hi there {name}")
-
-
-greet(name="Tony")
-
-print()
-# ######################################################################################################################
+# f_ f_ i_ w_
+#
+# ___ ensure_no_kwargs fn
+#     _wraps fn
+#     ___ wrapper _args __kwargs
+#         __ kwargs
+#             ra___ V_E_ No kwargs allowed! sorry :(")
+#         r_ fn _args __kwargs
+#     r_ wra___
+#
+# _ensure_no_kwargs
+# ___ greet name
+#     print _"hi there |name|"
+#
+# greet name_"Tony"
+#
+# print()
+# # ######################################################################################################################
 # 290. Writing an ensure_first_arg_is Decorator_ensure-first-arg
 
-from functools import wraps
-
-
-def ensure_first_arg_is(val):
-    def inner(fn):
-        @wraps(fn)
-        def wrapper(*args, **kwargs):
-            if args and args[0] != val:
-                return f"First arg needs to be {val}"
-            return fn(*args, **kwargs)
-        return wrapper
-    return inner
-
-
-@ensure_first_arg_is("burrito")
-def fav_foods(*foods):
-    print(foods)
-
-
-print(fav_foods("burrito", "ice cream")) # ('burrito', 'ice cream')
-print(fav_foods("ice cream", "burrito")) # 'Invalid! First argument must be burrito'
-
-
-@ensure_first_arg_is(10)
-def add_to_ten(num1, num2):
-    return num1 + num2
-
-
-print(add_to_ten(10, 12))  # 12
-print(add_to_ten(1, 2))  # 'Invalid! First argument must be 10'
-
-print()
+# f_ f_ i_ w_
+#
+# ___ ensure_first_arg_is val
+#     ___ inner fn
+#         _wraps fn
+#         ___ wrapper _args __kwargs
+#             __ args a_ args|0| |- val
+#                 r_ _ First arg needs to be |val|
+#             r_ fn _args __kwargs
+#         r_ wra___
+#     r_ inn__
+#
+# _ensure_first_arg_is _burrito_
+# ___ fav_foods _foods
+#     print foods
+#
+# print fav_foods("burrito", "ice cream")) # ('burrito', 'ice cream')
+# print fav_foods("ice cream", "burrito")) # 'Invalid! First argument must be burrito'
+#
+# _ensure_first_arg_is 10
+# ___ add_to_ten num1 num2
+#     r_ num1 + num2
+#
+# print(add_to_ten(10, 12))  # 12
+# print(add_to_ten(1, 2))  # 'Invalid! First argument must be 10'
+#
+# print()
 # ######################################################################################################################
 # Enforcing Argument Types With A Decorator
 
-def enforce(*types):
-    def decorator(f):
-        def new_func(*args, **kwargs):
-            # convert args into something mutable
-            newargs = []
-            for (a, t) in zip(args, types):
-               newargs.append( t(a))  # feel free to have more elaborated convertion
-            return f(*newargs, **kwargs)
-        return new_func
-    return decorator
-
-
-@enforce(str, int)
-def repeat_msg(msg, times):
-    for time in range(times):
-        print(msg)
-
-
-@enforce(float, float)
-def divide(a, b):
-    print(a/b)
-# repeat_msg("hello", '5')
-
-
-divide('1', '4')
-
-print()
-# ######################################################################################################################
+# ___ enforce types
+#     ___ decorator f
+#         ___ new_func _args __kwargs
+#             # convert args into something mutable
+#             newargs _ ||
+#             ___  a t __ z_ args types
+#                newargs.a_(t(a))  # feel free to have more elaborated convertion
+#             r_ f(_newargs __kwargs
+#         r_ new_fu__
+#     r_ dec__
+#
+# _enforce st in
+# ___ repeat_msg msg times
+#     ___ time __ r_ times
+#         print msg
+#
+# _enforce fl_ fl_
+# ___ divide a b
+#     print a/b
+# # repeat_msg("hello", '5')
+#
+# divide '1' '4'
+#
+# print()
+# # ######################################################################################################################
 # Using a @syntax
 # user_has_permission
 
-user = {'username': 'jose123', 'access_level': 'guest'}
-
-
-def user_has_permission(func):
-    def secure_func():
-        if user.get('access_level') == 'admin':
-            return func()
-    return secure_func
-
-
-@user_has_permission
-def my_function():
-    """
-    Allows us to retrieve the password for the admin panel.
-    """
-    return 'Password for admin panel is 1234.'
-
-
-@user_has_permission
-def another():
-    pass
-
-
-print(my_function.__name__)
-print(another.__name__)
-
-print()
+# user = {'username': 'jose123', 'access_level': 'guest'}
+#
+# ___ user_has_permission func
+#     ___ secure_func
+#         __ user.g_ 'access_level' __ 'admin'
+#             r_ func
+#     r_ se__f_
+#
+# _user_has_permission
+# ___ my_function
+#     """
+#     Allows us to retrieve the password for the admin panel.
+#     """
+#     r_ 'Password for admin panel is 1234.'
+#
+# _user_has_permission
+# ___ another
+#     pass
+#
+# print my_function.__n_
+# print another.__n_
+#
+# print()
 # ######################################################################################################################
 # Functools wraps in Python
 # user_has_permission
 
-import functools
-
-user = {'username': 'jose123', 'access_level': 'guest'}
-
-
-def user_has_permission(func):
-    @functools.wraps(func)
-    def secure_func():
-        if user.get('access_level') == 'admin':
-            return func()
-    return secure_func
-
-
-@user_has_permission
-def my_function():
-    """
-    Allows us to retrieve the password for the admin panel.
-    """
-    return 'Password for admin panel is 1234.'
-
-
-@user_has_permission
-def another():
-    pass
-
-
-print(my_function.__name__)
-print(another.__name__)
-
-print()
+# i_ f_
+#
+# user = {'username': 'jose123', 'access_level': 'guest'}
+#
+# ___ user_has_permission func
+#     _fun___.w_ func
+#     ___ secure_func
+#         __ user.g_('access_level') __ 'admin'
+#             r_ func
+#     r_ se__fu_
+#
+# _user_has_permission
+# ___ my_function
+#     """
+#     Allows us to retrieve the password for the admin panel.
+#     """
+#     r_ 'Password for admin panel is 1234.'
+#
+# _user_has_permission
+# ___ another
+#     pass
+#
+# print my_fu_.__n_
+# print ano__.__n_
+#
+# print()
 # ######################################################################################################################
 # Decorating functions with parameters
 # user_has_permission
 
-import functools
-
-user = {'username': 'jose123', 'access_level': 'admin'}
-
-
-def user_has_permission(func):
-    @functools.wraps(func)
-    def secure_func(panel):
-        if user.get('access_level') == 'admin':
-            return func(panel)
-    return secure_func
-
-
-@user_has_permission
-def my_function(panel):
-    """
-    Allows us to retrieve the password for the admin panel.
-    """
-    return f'Password for {panel} panel is 1234.'
-
-
-print(my_function.__name__)
-
-print(my_function('movies'))
-
-print()
+# i_ f_
+#
+# user = {'username': 'jose123', 'access_level': 'admin'}
+#
+# ___ user_has_permission func
+#     _func___.wr_ func
+#     ___ secure_func panel
+#         __ user.g__ 'access_level') __ 'admin'
+#             r_ func panel
+#     r_ sec__fu_
+#
+# _user_has_permission
+# ___ my_function panel
+#     """
+#     Allows us to retrieve the password for the admin panel.
+#     """
+#     r_ _'Password for |panel| panel is 1234.'
+#
+# print my_fun_.__n_
+#
+# print my_fun__ movies
+#
+# print()
 # ######################################################################################################################
 # Decorators with parameters
 # user_has_permission
 
-import functools
-
-user = {'username': 'jose123', 'access_level': 'user'}
-
-
-def user_has_permission(access_level):
-    def my_decorator(func):
-        @functools.wraps(func)
-        def secure_func(panel):
-            if user.get('access_level') == access_level:
-                return func(panel)
-        return secure_func
-    return my_decorator
-
-
-@user_has_permission('user')
-def my_function(panel):
-    """
-    Allows us to retrieve the password for the admin panel.
-    """
-    return f'Password for {panel} panel is 1234.'
-
-
-print(my_function.__name__)
-print(my_function('movies'))
-
-print()
+# i_ f_
+#
+# user = {'username': 'jose123', 'access_level': 'user'}
+#
+# ___ user_has_permission access_level
+#     ___ my_decorator func
+#         func__.wr__ func
+#         ___ secure_func panel
+#             __ user.g__('access_level') __ access_level
+#                 r_ func panel
+#         r_ secure_func
+#     r_ my_decorator
+#
+# _user_has_permission 'user'
+# ___ my_function panel
+#     """
+#     Allows us to retrieve the password for the admin panel.
+#     """
+#     r_ _'Password for |panel| panel is 1234.'
+#
+# print(my_function.__n_
+# print(my_function('movies'))
+#
+# print()
 # ######################################################################################################################
 #  Generic decorators for any function
 # user_has_permission
 
-import functools
-
-user = {'username': 'jose123', 'access_level': 'admin'}
-
-
-def user_has_permission(func):
-    @functools.wraps(func)
-    def secure_func(*args, **kwargs):
-        if user.get('access_level') == 'admin':
-            return func(*args, **kwargs)
-    return secure_func
-
-
-@user_has_permission
-def my_function(panel):
-    """
-    Allows us to retrieve the password for the admin panel.
-    """
-    return f'Password for {panel} panel is 1234.'
-
-
-@user_has_permission
-def another():
-    pass
-
-
-print(my_function.__name__)
-
-print(my_function('movies'))
-print(another())
-
-print()
+# i_ f_
+#
+# user = {'username': 'jose123', 'access_level': 'admin'}
+#
+# ___ user_has_permission func
+#     _fun___.wr__ func
+#     ___ secure_func _args __kwargs
+#         __ user.g_('access_level') __ 'admin'
+#             r_ func _args __kwargs
+#     r_ secure_func
+#
+# _user_has_permission
+# ___ my_function panel
+#     """
+#     Allows us to retrieve the password for the admin panel.
+#     """
+#     r_ _'Password for |panel| panel is 1234.'
+#
+# _user_has_permission
+# ___ another
+#     pass
+#
+# print(my_function.__n_
+#
+# print(my_function('movies'))
+# print(another())
+#
+# print()
 # ######################################################################################################################
-# Пример работы с функциями как с объектами первого класса
-"""Пример работы с функциями как с объектами первого класса"""
-
-# Создание ссылки на объект
-out = print
-out('Hello')
-
-# Сохранение ссылок на функции в структуре данных
-
-def add(x, y):
-    return x + y
-
-def sub(x, y):
-    return x - y
-
-operations = {
-    '+': add,
-    '-': sub
-}
-
-print(operations['+'](2, 3))
-print(operations['-'](2, 3))
-
-print()
+# # Пример работы с функциями как с объектами первого класса
+# """Пример работы с функциями как с объектами первого класса"""
+#
+# # Создание ссылки на объект
+# out = print
+# out('Hello')
+#
+# # Сохранение ссылок на функции в структуре данных
+#
+# ___ add x y
+#     r_ x + y
+#
+# ___ sub x y
+#     r_ x - y
+#
+# operations = {
+#     '+': add,
+#     '-': sub
+# }
+#
+# print(oper___['+'](2, 3))
+# print(oper___['-'](2, 3))
+#
+# print()
 # ######################################################################################################################
 # Пример использования лямбда-выражений
-
-operations = {
-    '+': lambda x, y: x + y,
-    '-': lambda x, y: x - y
-}
-
-print(operations['+'](2, 3))
-print(operations['-'](2, 3))
-
-print()
+#
+# operations = {
+#     '+': l_ x, y: x + y,
+#     '-': l_ x, y: x - y
+# }
+#
+# print(oper___['+'](2, 3))
+# print(oper___['-'](2, 3))
+#
+# print()
 # ######################################################################################################################
 # Пример замыкания
 
-def make_closure():
-    variable = 42
-
-    def closure():
-        return variable
-
-    return closure
-
-
-fn = make_closure()
-print(fn())
-
-print()
+# ___ make_closure
+#     variable _ 42
+#
+#     ___ closure
+#         r_ var__
+#
+#     r_ clo___
+#
+# fn _ ma___cl__
+# print fn
+#
+# print()
 # ######################################################################################################################
 # Пример использования комбинаторных генераторов модуля itertools
 
-from itertools import permutations, combinations, combinations_with_replacement
-
-print(list(permutations('ABC', 2)))
-print()
-
-print(list(combinations('ABC', 2)))
-print()
-
-print(list(combinations_with_replacement('ABC', 2)))
-
-print()
+# f_ i_ i_ permut___ combin___ combin__w___repl___
+#
+# print(l_(per__ 'ABC' 2
+# print()
+#
+# print(l_(com___ 'ABC' 2
+# print()
+#
+# print(l_(com__w__rep_ 'ABC' 2
+#
+# print()
 # ######################################################################################################################
 # Пример использования функции product модуля itertools
 
 # Пример использования функций takewhile и dropwhile модуля itertools
 
-from itertools import takewhile, dropwhile
-
-
-numbers = [1, 4, 6, 4, 1]
-predicate = lambda x: x < 5
-
-for value in takewhile(predicate, numbers):
-    print(value)
-
-print()
-
-for value in dropwhile(predicate, numbers):
-    print(value)
-
-print()
+# f_ i_ i_ take__ drop__
+#
+# numbers = [1, 4, 6, 4, 1]
+# predicate = l_ x| x < 5
+#
+# ___ value __ takewhile pred____ num____
+#     print value
+#
+# print()
+#
+# ___ value __ dropwhile pred_____ num____
+#     print value
+#
+# print()
 # ######################################################################################################################
 # Пример использования модуля operator
 
-from operator import neg, mul, le
-from functools import reduce, partial
-
-# Сделать числа списка отрицательными
-print(list(map(neg, [2, 4, 8, 9, 1])))
-
-# Вычислить произведение элементов списка
-print(reduce(mul, [3, 4, 5]))
-
-# Оставить только числа, большие или равные пяти (используется оператор <=, так
-# как при помощи функции partial применяется первый аргумент, то есть условие
-# выглядит как 5 <= x).
-print(list(filter(partial(le, 5), [5, 4, 8, 1, 3, 10])))
-
-print()
-# ######################################################################################################################
+# f_ ope_ i___ neg mul le
+# f___ f_ i___ re__ par__
+#
+# # Сделать числа списка отрицательными
+# print(l_(m_(neg_ |2 4 8 9 1|)))
+#
+# # Вычислить произведение элементов списка
+# print(r_(mul_ |3 4 5|
+#
+# # Оставить только числа, большие или равные пяти (используется оператор <=, так
+# # как при помощи функции partial применяется первый аргумент, то есть условие
+# # выглядит как 5 <= x).
+# print(l_(f_(p_(le_ 5)_ |5 4 8 1 3 10|)))
+#
+# print()
+# # ######################################################################################################################
