@@ -1075,169 +1075,157 @@ print()
 # Эта функция возвращает аргумент, умноженный на два,
 # если он отрицательный, или аргумент, умноженный на три,
 # если он больше или равен нулю
-___ function(
-    __ x < 0:
-        r_ x * 2
-    else:
-        r_ x * 3
-
-
-___ main():
-    # Вывод значений функции в диапазоне [-3, 3]
-    for i __ range(-3, 4):
-        y = function(i)
-        print('function(', i, ') = ', y, sep='')
-
-
-__ __name__ == '__main__':
-    main()
-
-print()
+# ___ function(
+#     __ x < 0
+#         r_ x * 2
+#     ___
+#         r_ x * 3
+#
+# ___ main():
+#     # Вывод значений функции в диапазоне [-3, 3]
+#     ___ i __ range(-3, 4):
+#         y = f_(i)
+#         print 'function('_ i_ ') = '_ y s_-''
+#
+# __ __n_ __ __m_
+#     ___
+#
+# print()
 # ######################################################################################################################
 # return-in-procedures
 
-___ hello(name):
-    # Если имя пустое, выходим из функции
-    __ not name:
-        r_
-    print('Hello, ', name, '!', sep='')
-
-
-hello('Alex')
-hello('')
-hello('Python')
-
-print()
+# ___ hello name
+#     # Если имя пустое, выходим из функции
+#     __ n_ n_
+#         r_
+#     print 'Hello, '_ n__ !_ s_-''
+#
+# hello Alex
+# hello ''
+# hello Python
+#
+# print()
 # ######################################################################################################################
 # functions-in-expressions
 
-___ add(a, b):
-    r_ a + b
-
-
-___ sub(a, b):
-    r_ a - b
-
-
-# Вызов функции может быть частью выражения
-print(add(2, 3) + sub(2, 3))  # => print((2 + 3) + (2 - 3))
-
-print()
+# ___ add a b
+#     r_ a + b
+#
+# ___ sub a b
+#     r_ a - b
+#
+# # Вызов функции может быть частью выражения
+# print(a_(2, 3) + s_(2, 3))  # => print((2 + 3) + (2 - 3))
+#
+# print()
 # ######################################################################################################################
 # keyword-arguments
 
 # Функция, которая принимает три аргумента
-___ info(object, color, price):
-    print('Объект:', object)
-    print('Цвет:', color)
-    print('Цена:', price)
-    print()
-
-
-# передача параметров в прямом порядке
-info('ручка', 'синий', 1)
-# передача параметров в произвольном порядке
-info(price=5, object='чашка', color='оранжевый')
-# можно смешивать оба способа, но сначала должны идти параметры,
-# которые передаются в прямом порядке
-info('кофе', price=10, color='чёрный')
-
-print()
+# ___ info object color price
+#     print Объект:_ object
+#     print Цвет:_ color
+#     print Цена:  price
+#     print()
+#
+# # передача параметров в прямом порядке
+# i_  ручка _ синий _ 1
+# # передача параметров в произвольном порядке
+# info price_5 object_чашка color_оранжевый
+# # можно смешивать оба способа, но сначала должны идти параметры,
+# # которые передаются в прямом порядке
+# info кофе _ price_10 color_ чёрный
+#
+# print()
 # ######################################################################################################################
 # optional-arguments
 
 # Если параметр name не задан, то name = 'Alex'
-___ hello name_'Alex'
-    print 'Hello, ' name '!' s_-''
-
-hello Python
-hello()
-
-print()
+# ___ hello name_'Alex'
+#     print 'Hello, ' name '!' s_-''
+#
+# hello Python
+# hello()
+#
+# print()
 # ######################################################################################################################
 # functions_as_first_class_objects
 
 # Создание ссылки на объект
-out = print
-out Hello
-
+# out = print
+# out Hello
 
 # Сохранение ссылок на функции в структуре данных
 
-___ add x y
-    r_ x + y
+# ___ add x y
+#     r_ x + y
+#
+# ___ sub(x, y):
+#     r_ x - y
+#
+# operations _ _
+#     _+_: a_,
+#     _-_: s_
+# _
 
+# print(o_|_+_|(2, 3))
+# print(o_|_-_|(2, 3))
 
-___ sub(x, y):
-    r_ x - y
-
-
-operations = {
-    '+': add,
-    '-': sub
-}
-
-print(operations['+'](2, 3))
-print(operations['-'](2, 3))
-
-print()
+# print()
 # ######################################################################################################################
 # lambda_expressions
 
-operations = {
-    '+': lambda x, y: x + y,
-    '-': lambda x, y: x - y
-}
-
-print(operations['+'](2, 3))
-print(operations['-'](2, 3))
-
-print()
+# operations _ _
+#     _+_: l_ x y_ x + y
+#     _-_: l_ x y_ x - y
+# _
+#
+# print(o_|_+_|(2, 3))
+# print(o_|_-_|(2, 3))
+#
+# print()
 # ######################################################################################################################
 # closures
 
-﻿"""Пример замыкания"""
-
-
-___ make_closure():
-    variable = 42
-
-    ___ closure():
-        r_ variable
-
-    r_ closure
-
-
-fn = make_closure()
-print(fn())
-
-print()
+# ﻿"""Пример замыкания"""
+#
+# ___ make_closure
+#     variable _ 42
+#
+#     ___ closure
+#         r_ variable
+#
+#     r_ closure
+#
+# fn _ make_closure
+# print(fn())
+#
+# print()
 # ######################################################################################################################
 # advanced_closure_example
 
 """Демонстрация часто допускаемой ошибки и способа её решения"""
 
-___ make_powers(n):
+# ___ make_powers n
     """Функция, возвращающая список функций, каждая из которых вычисляет
     степень аргумента, равную данному индексу плюс 1
     (неправильная реализация)
     """
 
-    functions = []
-
-    for i __ range(1, n + 1):
-        functions.append(lambda x: x ** i)
-
-    r_ functions
-
-
-for function __ make_powers(3):
-    print(function(2))
+#     functions = ||
+#
+#     ___ i __ r_ 1 n + 1
+#         f_.a_ |l_ x_ x ** i
+#
+#     r_ functions
+#
+# ___ function __ make_powers 3
+#     print(function(2))
 
 # Видно, что результататом было не 2, 4, 8, как можно было бы ожидать,
 # а 8, 8, 8
 
-print()
+# print()
 
 # Причиной этого является так называемое позднее связываение.  К тому моменту,
 # когда вызываются функции из списка, цикл в функции make_powers уже выполнен и
@@ -1247,195 +1235,189 @@ print()
 # в локальные переменные каждой функции.  Единственный способ создать локальную
 # переменную в лямбда-выражении -- это создать параметр функции.
 
-___ make_powers(n):
+# ___ make_powers n
     """Функция, возвращающая список функций, каждая из которых вычисляет
     степень аргумента, равную данному индексу плюс 1"""
 
-print()
+# print()
 # ######################################################################################################################
 # Пример каррирования функции
 
-___def ordinary_add(x, y):
-    """Обычная функция"""
-    return x + y
-
-
-___ curryied_add(x):
-    """Каррированная функция"""
-
-    ___ do_add(y):
-        r_ x + y
-
-    r_ do_add
-
-print(ordinary_add(2, 3))
-print(curryied_add(2)(3))
-
-# Каррирование делает лёгким частичное применение функций
-add_to_five = curryied_add(5)
-print(add_to_five(2))
-print(add_to_five(3))
-
-print()
-
-# В виде лямбда-выражений
-ordinary_add = lambda x, y: x + y
-curryied_add = lambda x: lambda y: x + y
-
-print(ordinary_add(2, 3))
-print(curryied_add(2)(3))
-add_to_five = curryied_add(5)
-print(add_to_five(2))
-print(add_to_five(3))
-
-print()
+# ___def ordinary_add x y
+#     """Обычная функция"""
+#     r_ x + y
+#
+# ___ curryied_add x
+#     """Каррированная функция"""
+#
+#     ___ do_add y
+#         r_ x + y
+#
+#     r_ do_add
+#
+# print o_(2, 3)
+# print c_(2)(3)
+#
+# # Каррирование делает лёгким частичное применение функций
+# add_to_five = c_ 5
+# print a_(2)
+# print a_(3)
+#
+# print()
+#
+# # В виде лямбда-выражений
+# ordinary_add _ l_ x_ y_ x + y
+# curryied_add _ l_ x_ l_ y_ x + y
+#
+# print o_(2, 3)
+# print curryied_add(2)(3))
+# add_to_five _ curryied_add 5
+# print add_to_five(2)
+# print add_to_five(3)
+#
+# print()
 # ######################################################################################################################
 # decorator
-
-___ decorator(fn):
-    """Пример декоратора"""
-
-    ___ decorated_fn(*args, **kwargs):
-        """Модифицированная функция"""
-
-        print('Decorated function says:')
-        fn(*args, **kwargs)  # вызов изначальной функции
-        print()
-
-    r_ decorated_fn
-
-
-@decorator
-___ hello():
-    print('Hello!')
-
-
-# Вызов декорированной функции
-hello()
-
-print()
+#
+# ___ decorator fn
+#     """Пример декоратора"""
+#
+#     ___ decorated_fn _args __kwargs
+#         """Модифицированная функция"""
+#
+#         print Decorated function says:
+#         fn _args __kwargs  # вызов изначальной функции
+#         print()
+#
+#     r_ decorated_fn
+#
+# _d
+# ___ hello
+#     print Hello!
+#
+# # Вызов декорированной функции
+# hello()
+#
+# print()
 # ######################################################################################################################
 # Пример создания декоратора с параметром
 
-___ cast_result(type_):
-    """Пример создания декоратора с параметром"""
-
-    ___ cast_decorator(function):
-        """Сам декоратор"""
-
-        ___ decorated_function(*args, **kwargs):
-            result = function(*args, **kwargs)
-            r_ type_(result)
-
-        r_ decorated_function
-
-    r_ cast_decorator
-
-@cast_result(float)
-___ add(x, y):
-    r_ x + y
-
-print(add(2, 3))
-
-import decimal
-
-@cast_result(repr)
-@cast_result(decimal.Decimal)
-___ div(x, y):
-    r_ x / y
-
-
-print(div(3, 2))
-
-print()
+# ___ cast_result type_
+#     """Пример создания декоратора с параметром"""
+#
+#     ___ cast_decorator function
+#         """Сам декоратор"""
+#
+#         ___ decorated_function _args __kwargs
+#             result _ function _args __kwargs
+#             r_ type_ result
+#
+#         r_ decorated_function
+#
+#     r_ cast_decorator
+#
+# _cast_result float
+# ___ add x y
+#     r_ x + y
+#
+# print add(2, 3)
+#
+# import decimal
+#
+# _cast_result repr
+# _cast_result d_.D_
+# ___ div x y
+#     r_ x / y
+#
+# print div(3, 2)
+#
+# print()
 # ######################################################################################################################
 # Пример использования функции map
 
-string = '2 4 8 15 42'
-numbers = map(int, string.split())
-print(list(numbers))
-
-print()
+# string _ '2 4 8 15 42'
+# numbers _ m_|i_ s_.s_
+# print l_ numbers
+#
+# print()
 # ######################################################################################################################
 # Пример использования функции filter
 
-numbers = [3, 2, -1, 0, 15, -8, -7, 3, -3, 8]
-positive_numbers = filter(lambda x: x > 0, numbers)
-print(list(positive_numbers))
-
-print()
+# numbers _ [3, 2, -1, 0, 15, -8, -7, 3, -3, 8]
+# positive_numbers _ f_(l_ x_ x > 0_ n_
+# print l_|positive_numbers
+#
+# print()
 # ######################################################################################################################
 # Пример использования функции reduce
 
-from functools import reduce
-
-numbers = [3, 2, 1, 8, -3, -2]
-# Произведение всех чисел списка
-product = reduce(lambda x, y: x * y, numbers)
-
-print(product)
-
-print()
+# f_ f_ _____ r_
+#
+# numbers _ [3, 2, 1, 8, -3, -2]
+# # Произведение всех чисел списка
+# product _ r_ l_ x_ y_ x * y, numbers
+#
+# print(product)
+#
+# print()
 # ######################################################################################################################
 # lru_cache
-
-from functools import lru_cache
-
-
-# Здесь функция вычисления чисел Фибоначчи записана рекурсивно, но по
-# произоводительности и расходу памяти она будет сравнима с нерекурсивной
-@lru_cache(maxsize=None)
-___ fibonacci(index):
-    __ index < 2:
-        r_ 1
-    else:
-        r_ fibonacci(index - 1) + fibonacci(index - 2)
-
-
-for i __ range(1, 1000):
-    print(fibonacci(i))
-
-print()
+#
+# f_ f_ _____ l_c
+#
+# # Здесь функция вычисления чисел Фибоначчи записана рекурсивно, но по
+# # произоводительности и расходу памяти она будет сравнима с нерекурсивной
+# _l_c_ maxsize_N_
+# ___ fibonacci index
+#     __ index < 2
+#         r_ 1
+#     ____
+#         r_ fibonacci|index - 1| + fibonacci|index - 2|
+#
+# for i __ r_  1 1000
+#     print fibonacci _
+#
+# print()
 # ######################################################################################################################
 # partial
 
-from functools import partial
-
-# Частичное применение функции
-print_with_comma = partial(print, sep=', ')
-
-print_with_comma(2, 3, 5)
-
-print()
+# f_ f_ _____ p_
+#
+# # Частичное применение функции
+# print_with_comma = p_(print s_-', '
+#
+# print_with_comma 2 3 5
+#
+# print()
 # ######################################################################################################################
 # Пример использования комбинаторных генераторов модуля itertools
 
-from itertools import permutations, combinations, combinations_with_replacement
-
-print(list(permutations('ABC', 2)))
-print()
-
-print(list(combinations('ABC', 2)))
-print()
-
-print(list(combinations_with_replacement('ABC', 2)))
-
-print()
+# f_ i_ _____ per____, comb____, combinations_with_replacement
+#
+# print(l_(per_ _ABC_ 2
+# print()
+#
+# print(l_(comb_ _ABC_ 2
+# print()
+#
+# print(l_(combinations_with_replacement _ABC_ 2
+#
+# print()
 # ######################################################################################################################
 # Пример использования функции product модуля itertools
 
 from itertools import product
 
-for a, b __ product(range(2), range(3)):
-    print(a, b)
-
-print()
+# ___ a, b __ p_ r_ 2 r_ 3
+#     print a b
+#
+# print()
 # ######################################################################################################################
 # Positional Arguments
 
 # ___ my_func a b c
 #     print "a_|0|_ b_|1|_ c_|2|".f_ a b c
-# 
+#
 # print()
 # ######################################################################################################################
 # Default Values
@@ -1523,397 +1505,379 @@ print()
 # ######################################################################################################################
 # Unpacking an iterable into positional arguments
 
-def func1(a, b, c):
-    print(a)
-    print(b)
-    print(c)
-
-
-l = [10, 20, 30]
-
-The function expects three positional arguments, but we only supplied a single one (albeit a list).
-
-But we could unpack the list, and then pass it to as the function arguments:
-
-func1(*l)
-
-print()
+# ___ func1 a b c
+#     print a
+#     print b
+#     print c
+#
+# l = [10, 20, 30]
+#
+# # The function expects three positional arguments, but we only supplied a single one (albeit a list).
+# # But we could unpack the list, and then pass it to as the function arguments:
+#
+# func1 _l
+#
+# print()
 # ######################################################################################################################
 # To make the keyword argument optional, we just need to specify a default value in the function definition:
 
-def func1(*args, d='n/a'):
-    print(args)
-    print(d)
-
-
-func1(1, 2, 3)
-func1()
-
-print()
+# ___ func1 _args d_'n/a'
+#     print args
+#     print d
+#
+# func1 1 2 3
+# func1()
+#
+# print()
 # ######################################################################################################################
 # Sometimes we want only keyword arguments, in which case we still have to exhaust the positional arguments first -
 # but we can use the following syntax if we do not want any positional parameters passed in:
 
-def func1(*, d='hello'):
-    print(d)
-
-func1(10, d='bye')
-func1(d='bye')
-
-print()
+# ___ func1 _, d_'hello'
+#     print(d)
+#
+# func1 10  d_bye
+# func1 d_ bye
+#
+# print()
 # ######################################################################################################################
 # We can also include positional non-defaulted (first), positional defaulted (after positional non-defaulted)
 # followed lastly (after exhausting positional arguments) by keyword args (defaulted or non-defaulted in any order)
 
-def func1(a, b=20, *args, d=0, e='n/a'):
-    print(a, b, args, d, e)
-
-func1(5, 4, 3, 2, 1, d=0, e='all engines running')
-
-func1(0, 600, d='goooood morning', e='python!')
-
-func1(11, 'm/s', 24, 'mph', d='unladen', e='swallow')
-
-print()
+# ___ func1 a b_20 _args d_0 e_'n/a'
+#     print a b args d e
+#
+# func1 5 4 3 2 1 d_0 e_ all engines running
+# func1 0 600 d_ goooood morning e_ python!
+# func1 11 'm/s' 24 mph d_ unladen e_ swallow
+#
+# print()
 # ######################################################################################################################
 # **kwargs
 
-def func(**kwargs):
-    print(kwargs)
-
-func(x=100, y=200)
-
-print()
-# ######################################################################################################################
+# ___ func __kwargs
+#     print kwargs
+#
+# func x_100 y_200
+#
+# print()
+# # ######################################################################################################################
 # *args **kwargs
 
-def func(*args, **kwargs):
-    print(args)
-    print(kwargs)
-
-func(1, 2, a=100, b=200)
-
-print()
+# ___ func _args __kwargs
+#     print args
+#     print kwargs
+#
+# func 1 2 a_100 b_200
+#
+# print()
 # ######################################################################################################################
 # If you want to specify both specific keyword-only arguments and **kwargs you will need to first get to a point
 # where you can define a keyword-only argument (i.e. exhaust the positional arguments, using either *args or just *)
 
-def func(*, d, **kwargs):
-    print(d)
-    print(kwargs)
-
-func(d=1, x=100, y=200)
-
-print()
+# ___ func _ d __kwargs
+#     print d
+#     print kwargs
+#
+# func d_1 x_100 y_200
+#
+# print()
 # ######################################################################################################################
 # Positionals Only: no extra positionals, no defaults (all positionals required)
 
-def func(a, b):
-    print(a, b)
-
-func('hello', 'world')
-func(b='world', a='hello')
-
-print()
+# ___ func a b
+#     print a b
+#
+# func hello _ world
+# func b_ world _ a_ hello
+#
+# print()
 # ######################################################################################################################
 # Positionals Only: no extra positionals, defaults (some positionals optional)
 
-def func(a, b='world', c=10):
-    print(a, b, c)
-
-func('hello')
-func('hello', c='!')
-
-print()
+# ___ func a b_ world  c_10
+#     print a b c
+#
+# func hello
+# func hello c='!'
+#
+# print()
 # ######################################################################################################################
 # Positionals Only: extra positionals, no defaults (all positionals required)
 
-def func(a, b, *args):
-    print(a, b, args)
-
-func(1, 2, 'x', 'y', 'z')
-
-print()
+# ___ func a b _args
+#     print a b args
+#
+# func 1 2 'x' 'y' 'z'
+#
+# print()
 # ######################################################################################################################
 # Keywords Only: no positionals, no defaults (all keyword args required)
-
-def func(*, a, b):
-    print(a, b)
-
-func(a=1, b=2)
-
-print()
+#
+# ___ func _ a b
+#     print a b
+#
+# func a_1 b_2
+#
+# print()
 # ######################################################################################################################
 # Keywords Only: no positionals, some defaults (not all keyword args required)
 
-def func(*, a=1, b):
-    print(a, b)
-
-func(a=10, b=20)
-func(b=2)
-
-print()
+# ___ func _ a_1 b
+#     print a b
+#
+# func a_10 b_20
+# func b_2
+#
+# print()
 # ######################################################################################################################
 # Keywords and Positionals: some positionals (no defaults), keywords (no defaults)
 
-def func(a, b, *, c, d):
-    print(a, b, c, d)
-
-func(1, 2, c=3, d=4)
-func(1, 2, d=4, c=3)
-func(1, c=3, d=4, b=2)
-
-print()
+# ___ func a b _ c d
+#     print a b c d
+#
+# func 1 2 c_3 d_4
+# func 1 2 d_4 c_3
+# func 1 c_3 d_4 b_2
+#
+# print()
 # ######################################################################################################################
 # Keywords and Positionals: some positional defaults
 
-def func(a, b=2, *, c, d=4):
-    print(a, b, c, d)
-
-func(1, c=3)
-func(c=3, a=1)
-func(1, 2, c=3, d=4)
-func(c=3, a=1, b=2, d=4)
-
-print()
+# ___ func a b_2 _, c d_4
+#     print a b c d
+#
+# func 1 c_3
+# func c_3 a_1
+# func 1 2 c_3 d_4
+# func c_3 a_1 b_2 d_4
+#
+# print()
 # ######################################################################################################################
 # Keywords and Positionals: extra positionals
 
-def func(a, b=2, *args, c=3, d):
-    print(a, b, args, c, d)
-
-func(1, 2, 'x', 'y', 'z', c=3, d=4)
-
-Note that if we are going to use the extra arguments, then we cannot actually use a default value for b:
-
-func(1, 'x', 'y', 'z', c=3, d=4)
-
-print()
+# ___ func a b=2 _args c_3 d
+#     print a b args c d
+#
+# func 1 2 'x' 'y' 'z' c_3, d_4
+#
+# # Note that if we are going to use the extra arguments, then we cannot actually use a default value for b:
+#
+# func 1 'x' 'y' 'z' c_3 d_4
+#
+# print()
 # ######################################################################################################################
 # Keywords and Positionals: no extra positionals, extra keywords
-
-def func(a, b, *, c, d=4, **kwargs):
-    print(a, b, c, d, kwargs)
-
-func(1, 2, c=3, x=100, y=200, z=300)
-func(x=100, y=200, z=300, c=3, b=2, a=1)
-
-print()
+#
+# ___ func a b _, c d_4 __kwargs
+#     print a b c d kwargs
+#
+# func 1 2 c_3 x_100 y_200 z=300
+# func x_100 y_200 z_300 c_3 b_2 a_1
+#
+# print()
 # ######################################################################################################################
 # Keywords and Positionals: extra positionals, extra keywords
 
-def func(a, b, *args, c, d=4, **kwargs):
-    print(a, b, args, c, d, kwargs)
-
-func(1, 2, 'x', 'y', 'z', c=3, d=5, x=100, y=200, z=300)
-
-print()
+# ___ func a b _args c d_4 __kwargs
+#     print a b args c d kwargs
+#
+# func 1 2 'x' 'y' 'z' c_3, d_5 x_100_ y_200 z_300
+#
+# print()
 # ######################################################################################################################
 # Keywords and Positionals: only extra positionals and extra keywords
 
-def func(*args, **kwargs):
-    print(args, kwargs)
-
-func(1, 2, 3, x=100, y=200, z=300)
-
-print()
+# ___ func _args __kwargs
+#     print args kwargs
+#
+# func 1 2 3 x_100 y_200 z_300
+#
+# print()
 # ######################################################################################################################
 # Another Use Case
 # log_to_console
 
-def calc_hi_lo_avg(*args, log_to_console=False):
-    hi = int(bool(args)) and max(args)
-    lo = int(bool(args)) and min(args)
-    avg = (hi + lo)/2
-    if log_to_console:
-        print("high={0}, low={1}, avg={2}".format(hi, lo, avg))
-    return avg
-
-avg = calc_hi_lo_avg(1, 2, 3, 4, 5)
-print(avg)
-
-avg = calc_hi_lo_avg(1, 2, 3, 4, 5, log_to_console=True)
-print(avg)
-
-print()
+# ___ calc_hi_lo_avg _args log_to_console_F_
+#     hi _ i_ b_ a_ ___ m_a_
+#     lo _ i_ b_ a_ a_ m_ args
+#     avg _ (hi + lo)/2
+#     __ log_to_console
+#         print high_|0| low_|1| avg_|2|".f_ hi lo avg
+#     r_ avg
+#
+# avg _ calc_hi_lo_avg 1 2 3 4 5
+# print avg
+#
+# avg _ calc_hi_lo_avg 1 2 3 4 5 log_to_console_T_
+# print avg
+#
+# print()
 # ######################################################################################################################
 # A Simple Function Timer
 
-import time
-
-def time_it(fn, *args, rep=5, **kwargs):
-    start = time.perf_counter()
-    for i in range(rep):
-        fn(*args, **kwargs)
-    end = time.perf_counter()
-    return (end - start) / rep
-
-
-def compute_powers_1(n, *, start=1, end):
-    # using a for loop
-    results = []
-    for i in range(start, end):
-        results.append(n**i)
-    return results
-
-def compute_powers_2(n, *, start=1, end):
-    # using a list comprehension
-    return [n**i for i in range(start, end)]
-
-def compute_powers_3(n, *, start=1, end):
-    # using a generator expression
-    return (n**i for i in range(start, end))
-
-compute_powers_1(2, end=5)
-compute_powers_2(2, end=5)
-list(compute_powers_3(2, end=5))
-
-time_it(compute_powers_1, n=2, end=20000, rep=4)
-time_it(compute_powers_2, 2, end=20000, rep=4)
-time_it(compute_powers_3, 2, end=20000, rep=4)
-
-print()
+# i_ t_
+#
+# ___ time_it fn _args rep_5 __kwargs
+#     start _ t.p__c_
+#     ___ i __ r_ rep
+#         fn _args __kwargs
+#     end _ t__.p__c__()
+#     r_ (end - start) / rep
+#
+# ___ compute_powers_1 n _, start_1 end
+#     # using a for loop
+#     results = __
+#     ___ i __ r_ start end
+#         r_.a_ n**i
+#     r_ results
+#
+# ___ compute_powers_2 n _ start_1, end
+#     # using a list comprehension
+#     r_ |n**i ___ i __ r_ start end
+#
+# ___ compute_powers_3 n _ start_1 end
+#     # using a generator expression
+#     r_ |n**i ___ i __ r_ start end
+#
+# compute_powers_1 2 end_5
+# compute_powers_2 2 end_5
+# l_(compute_powers_3 2 e_-5
+#
+# time_it compute_powers_1 n_2 end_20000 rep_4
+# time_it compute_powers_2 2 end_20000 rep_4
+# time_it compute_powers_3 2 end_20000 rep_4
+#
+# print()
 # ######################################################################################################################
 # We can define such help using docstrings
 
-def my_func(a, b):
-    'Returns the product of a and b'
-    return a*b
-
-help(my_func)
-
-print()
+# ___ my_func a b
+#     'Returns the product of a and b'
+#     r_ a*b
+#
+# help my_func
+#
+# print()
 # ######################################################################################################################
 # Docstrings can span multiple lines using a multi-line string literal:
 
-
-def fact(n):
-    '''Calculates n! (factorial function)
-
-    Inputs:
-        n: non-negative integer
-    Returns:
-        the factorial of n
-    '''
-
-    if n < 0:
-        '''Note that this is not part of the docstring!'''
-        return 1
-    else:
-        return n * fact(n - 1)
-
-
-help(fact)
-
-Docstrings, when
-found, are
-simply
-attached
-to
-the
-function in the
-__doc__
-property:
-
-
-fact.__doc__
-
-print()
-# ######################################################################################################################
+# ___ fact n
+#     '''Calculates n! (factorial function)
+#     Inputs:
+#         n: non-negative integer
+#     Returns:
+#         the factorial of n
+#     '''
+#
+#     __ n < 0
+#         '''Note that this is not part of the docstring!'''
+#         r_ 1
+#     ____
+#         r_ n * fact(n - 1)
+#
+# help fact
+#
+# # Docstrings, when found, are simply attached to the function in the __doc__ property:
+#
+#
+# fact.__d_
+#
+# print()
+# # ######################################################################################################################
 # Annotations
 
-def my_func(a: 'annotation for a',
-            b: 'annotation for b') -> 'annotation for return':
-    return a * b
-
-
-help(my_func)
-
-print()
+# ___ my_func a: 'annotation for a'
+#             b: 'annotation for b') __ 'annotation for return':
+#     r_ a * b
+#
+# help my_func
+#
+# print()
 # ######################################################################################################################
 # The annotations can be any expression, not just strings:
 
-x = 3
-y = 5
-def my_func(a: str) -> 'a repeated ' + str(max(3, 5)) + ' times':
-	return a*max(x, y)
-
-help(my_func)
-
-print()
+# x = 3
+# y = 5
+# ___ my_func a| s_ __ 'a repeated ' + s_(m_(3, 5)) + ' times':
+# 	r_ a*max x y
+#
+# help my_func
+#
+# print()
 # ######################################################################################################################
 # Just like docstrings are stored in the __doc__ property, annotations are stored in the __annotations__ property -
 # a dictionary whose keys are the parameter names, and values are the annotation.
 
-x = 3
-y = 5
-def my_func(a: str) -> 'a repeated ' + str(max(3, 5)) + ' times':
-	return a*max(x, y)
-
-my_func.__annotations__
-
-print()
+# x = 3
+# y = 5
+# ___ my_func a| s_ __ 'a repeated ' + s_(m_(3, 5)) + ' times':
+# 	r_ a*max x y
+#
+# my_func.__a_
+#
+# print()
 # ######################################################################################################################
 # Annotations will work with default parameters too: just specify the default after the annotation
 
-def my_func(a:str='a', b:int=1)->str:
-    return a*b
-
-help(my_func)
-my_func()
-my_func('abc', 3)
-
-def my_func(a:int=0, *args:'additional args'):
-    print(a, args)
-
-my_func.__annotations__
-
-help(my_func)
-
-print()
+# ___ my_func a|str_'a' b|int_1)__s_
+#     r_ a*b
+#
+# help my_func
+# my_func()
+# my_func abc 3
+#
+# ___ my_func a|i_-0 _args|additional args
+#     print a args
+#
+# my_func.__a_
+#
+# help my_func
+#
+# print()
 # ######################################################################################################################
 # Lambda Expressions
 
-lambda x: x**2
-
-print()
+# l_ x| x**2
+#
+# print()
 # ######################################################################################################################
 # Lambda Assigning to a Variable
 
-func = lambda x: x**2
-
-type(func)
-func(3)
-
-print()
+# func _ l_ x| x**2
+#
+# type func
+# func 3
+#
+# print()
 # ######################################################################################################################
 # We can specify arguments for lambdas just like we would for any function created using def, except for annotations:
 
-func_1 = lambda x, y=10: (x, y)
-func_1(1, 2)
-func_1(1)
-
-print()
+# func_1 _ l_ x y_10| (x y)
+# func_1 1 2
+# func_1 1
+#
+# print()
 # ######################################################################################################################
 # Lambda We can even use * and **:
 
-func_2 = lambda x, *args, y, **kwargs: (x, *args, y, {**kwargs})
-
-func_2(1, 'a', 'b', y=100, a=10, b=20)
-
-print()
+# func_2 _ l_ x _args y __kwargs| (x _args y {__kwargs})
+#
+# func_2 1 'a' 'b' y_100 a_10 b_20
+#
+# print()
 # ######################################################################################################################
 # Lambda
 # Passing as an Argument
 # Lambdas are functions, and can therefore be passed to any other function as an argument
 # (or returned from another function)
 
-def apply_func(x, fn):
-    return fn(x)
-apply_func(3, lambda x: x**2)
-apply_func(3, lambda x: x**3)
-
-print()
+# ___ apply_func x fn
+#     r_ fn x
+# apply_func 3 l_ x| x**2
+# apply_func 3 l_ x| x**3
+#
+# print()
 # ######################################################################################################################
 # Lambda
 # Passing as an Argument
@@ -1921,158 +1885,157 @@ print()
 # (or returned from another function)
 # we can make this even more generic:
 
-def apply_func(fn, *args, **kwargs):
-    return fn(*args, **kwargs)
-
-apply_func(lambda x, y: x+y, 1, 2)
-apply_func(lambda x, *, y: x+y, 1, y=2)
-apply_func(lambda *args: sum(args), 1, 2, 3, 4, 5)
-
-print()
+# ___ apply_func fn _args __kwargs
+#     r_ fn _args __kwargs
+#
+# apply_func l_ x y| x+y 1 2
+# apply_func l_ x _ y| x+y 1 y_2
+# apply_func l_ _args| s_ args 1 2 3 4 5
+#
+# print()
 # ######################################################################################################################
 # Lambdas and Sorting
 
-l = ['a', 'B', 'c', 'D']
-sorted(l)
-sorted(l, key=str.upper)
-
-We could have used a lambda here (but you should not, this is just to illustrate using a lambda in this case):
-
-sorted(l, key = lambda s: s.upper())
-
-print()
+# l = ['a', 'B', 'c', 'D']
+# s_ l
+# s_ l key_s_.u_
+#
+# # We could have used a lambda here (but you should not, this is just to illustrate using a lambda in this case):
+#
+# s_ l  key _ l_ s| s.u_
+#
+# print()
 # ######################################################################################################################
 # Lambdas and Sorting
 # Let's look at how we might create a sorted list from a dictionary:
 
-d = {'def': 300, 'abc': 200, 'ghi': 100}
-d
-sorted(d)
-
-sorted(d, key=lambda k: d[k])
-
-print()
+# d = {'def': 300, 'abc': 200, 'ghi': 100}
+# d
+# s_ d
+#
+# s_ d key_l_ k| d|k|
+#
+# print()
 # ######################################################################################################################
 #  here's another example where we want to sort a list of strings based on the last character of the string:
 
-l = ['Cleese', 'Idle', 'Palin', 'Chapman', 'Gilliam', 'Jones']
-
-sorted(l)
-
-sorted(l, key=lambda s: s[-1])
-
-print()
+# l = ['Cleese', 'Idle', 'Palin', 'Chapman', 'Gilliam', 'Jones']
+#
+# s_ l
+#
+# s_ l key_l_ s| s|-1|
+#
+# print()
 # ######################################################################################################################
 # Randomizing an Iterable using Sorted
 
-import random
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-sorted(l, key=lambda x: random.random())
-sorted('abcdefg', key = lambda x: random.random())
-
-And to get a string back instead of just a list:
-
-''.join(sorted('abcdefg', key = lambda x: random.random()))
-
-print()
+# i_ r_
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# s_ l key-l_ x| r_.r_
+# s_ |abcdefg|, key _ l_ x| r_.r_
+#
+# # And to get a string back instead of just a list:
+#
+# ''.j_(s_(|abcdefg| key _ l_ x| r_.r_
+#
+# print()
 # ######################################################################################################################
 # Function Introspection
 # The name attribute holds the function's name:
 
-def my_func(a, b=2, c=3, *, kw1, kw2=2, **kwargs):
-    pass
-
-f = my_func
-
-
-my_func.__name__
-f.__name__
-
-print()
+# ___ my_func a b_2 c_3 _, kw kw2_2 __kwargs
+#     pass
+#
+# f _ my_func
+#
+# my_func.__n_
+# f.__n_
+#
+# print()
 # ######################################################################################################################
 # Function Introspection
 # The defaults attribute is a tuple containing any positional parameter defaults:
 
-def my_func(a, b=2, c=3, *, kw1, kw2=2, **kwargs):
-    pass
-f = my_func
-
-my_func.__defaults__
-my_func.__kwdefaults__
-
-print()
+# ___ my_func a b_2 c_3 _, kw1 kw2_2 __kwargs
+#     pass
+# f _ my_func
+#
+# my_func.__d_
+# my_func.__k_
+#
+# print()
 # ######################################################################################################################
 # Function Introspection
 # The code attribute contains a code object:
 
-def my_func(a, b=1, *args, **kwargs):
-    i = 10
-    b = min(i, b)
-    return a * b
-
-my_func('a', 100)
-
-my_func.__code__
-
-dir(my_func.__code__)
-
-print()
+# ___ my_func a b_1 _args __kwargs
+#     i _ 10
+#     b _ m_ i b
+#     r_ a * b
+#
+# my_func |a| 100
+#
+# my_func.__c_
+#
+# d_ my_func.__c_
+#
+# print()
 # ######################################################################################################################
 # Function Introspection
 #
 # Attribute co_varnames is a tuple containing the parameter names and local variables:
 
-def my_func(a, b=2, c=3, *, kw1, kw2=2, **kwargs):
-    pass
-
-f = my_func
-
-my_func.__code__.co_varnames
-
-print()
+# ___ my_func a b_2 c_3 _, kw1 kw2_2 __kwargs
+#     pass
+#
+# f = my_func
+#
+# my_func.__c_.c__v_
+#
+# print()
 # ######################################################################################################################
 # Function Introspection
 # Attribute co_argcount returns the number of arguments (minus any * and ** args)
 
-def my_func(a, b=2, c=3, *, kw1, kw2=2, **kwargs):
-    pass
-
-f = my_func
-my_func.__code__.co_argcount
-
-print()
+# ___ my_func a b_2 c_3 _, kw1 kw2_2 __kwargs
+#     pass
+#
+# f _ my_func
+# my_func.__c_.c__a_
+#
+# print()
 # ######################################################################################################################
 # The inspect module
 
-def my_func(a, b=1, *args, **kwargs):
-    i = 10
-    b = min(i, b)
-    return a * b
-
-my_func('a', 100)
-
-import inspect
-inspect.isfunction(my_func)
-inspect.ismethod(my_func)
-
-print()
+# ___ my_func a b_1 _args __kwargs
+#     i _ 10
+#     b _ m_ i b
+#     r_ a * b
+#
+# my_func |a| 100
+#
+# i_ i_
+# i_.i_f_ my_func
+# inspect.i_m_my_func
+#
+# print()
 # ######################################################################################################################
 # Introspecting Callable Code
-
-def fact(n: "some non-negative integer") -> "n! or 0 if n < 0": """Calculates the factorial of a non-negative integer n
-
-If n is negative, returns 0.
-"""
-if n < 0:
-    return 0
-elif n <= 1:
-    return 1
-else:
-    return n * fact(n-1)
-
-inspect.getsource(fact)
-
-print()
+#
+# ___ fact(n: "some non-negative integer") -> "n! or 0 if n < 0": """Calculates the factorial of a non-negative integer n
+#
+# If n is negative, returns 0.
+# """
+# __ n < 0
+#     r_ 0
+# ____ n <= 1
+#     r_ 1
+# ___
+#     r_ n * fact(n-1)
+#
+# i_.g_(f_)
+#
+# print()
 # ######################################################################################################################
 # Functions and Methods are callable
 
@@ -3304,24 +3267,3 @@ print(list(filter(partial(le, 5), [5, 4, 8, 1, 3, 10])))
 
 print()
 # ######################################################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
